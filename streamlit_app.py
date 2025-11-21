@@ -80,7 +80,7 @@ if "q_index" not in st.session_state: st.session_state.q_index = 0
 if "scores" not in st.session_state: st.session_state.scores = {"Creator": 0, "Influencer": 0, "Analyst": 0, "Catalyst": 0}
 if "profile_result" not in st.session_state: st.session_state.profile_result = None
 
-# --- SIDEBAR: BIO, PRIVACY & COPYRIGHT ---
+# --- SIDEBAR: BIO, PRIVACY & COPYRIGHT + REDIRECT ---
 with st.sidebar:
     st.markdown("<h3 style='color:#0077B6;'>EMPOWERING INDIA 🇮🇳</h3>", unsafe_allow_html=True)
     st.title("Mohd Saad")
@@ -96,6 +96,12 @@ with st.sidebar:
     st.markdown("<b>Privacy Policy:</b> Your data is always safe and confidential. We never sell or share personal information.", unsafe_allow_html=True)
     st.markdown("<b>Copyright © 2025 Distoversity.</b> All rights reserved.", unsafe_allow_html=True)
     st.markdown("[LinkedIn](https://linkedin.com) | [Email](mailto:saad01489@gmail.com)")
+    st.markdown("---")
+    st.markdown("## Go to Career Guidance Platform (Distoversity)")
+    st.markdown(
+        "[👉 Try Distoversity AI Career Platform](https://distoversity-mvp-j4pmyhqdjr7v7ukpgwmyx6.streamlit.app/)",
+        unsafe_allow_html=True
+    )
 
 # --- MAIN TABS ---
 tab1, tab2, tab3, tab4 = st.tabs([
