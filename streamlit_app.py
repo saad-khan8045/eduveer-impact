@@ -120,30 +120,26 @@ with tab1:
     col1, col2 = st.columns([2,1])
     with col1:
         st.markdown("""
-        <div class="story-card">
-            <div class="story-year">2018 - 2020</div>
-            <div class="story-title">🏭 The Factory Floor Reality</div>
-            <div class="story-text">
-                My journey began at <b>Oppo Mobile & Yazaki</b>, 12-hour shifts as Line Engineer, assembling SMT boards.<br><br>
-                <b>Lesson:</b> India has millions of youth with grit but lacking guidance. I felt trapped, assembling products instead of building lives.
+        <div style="margin-bottom:22px;">
+            <div style="font-size:1.2em;color:#0077B6;font-weight:800;margin-bottom:4px;">📅 <span style="background:#E0F2FE;border-radius:8px;padding:2px 12px 2px 8px;">2018 – 2020</span></div>
+            <div style="font-size:1.07em;font-weight:700;">🏭 The Factory Floor Reality</div>
+            <div style="color:#475569;">
+            My journey began at <b>Oppo Mobile & Yazaki</b>, 12-hour shifts as Line Engineer, assembling SMT boards.<br>
+            <span style="font-weight:600;color:#F97316;">Lesson:</span> India has millions of youth with grit but lacking guidance. I felt trapped, assembling products instead of building lives.
             </div>
         </div>
-        """, unsafe_allow_html=True)
-        st.markdown("""
-        <div class="story-card" style="border-left-color: #F97316;">
-            <div class="story-year">2021 - 2024</div>
-            <div class="story-title">📞 The "Sales" Trap</div>
-            <div class="story-text">
-                I moved to Education Counseling (Amity/Manipal), helped 2,000+ students. Realized education was transactional, not transformational. Students became "Leads"; counselors closed deals, not dreams.
+        <div style="margin-bottom:22px;">
+            <div style="font-size:1.2em;color:#F97316;font-weight:800;margin-bottom:4px;">📅 <span style="background:#FEF3C7;border-radius:8px;padding:2px 10px 2px 8px;">2021 – 2024</span></div>
+            <div style="font-size:1.07em;font-weight:700;">📞 The "Sales" Trap</div>
+            <div style="color:#475569;">
+            I moved to Education Counseling (Amity/Manipal), helped 2,000+ students. Realized education was transactional, not transformational. Students became "Leads"; counselors closed deals, not dreams.
             </div>
         </div>
-        """, unsafe_allow_html=True)
-        st.markdown("""
-        <div class="story-card" style="border-left-color: #10B981;">
-            <div class="story-year">2024 - Present</div>
-            <div class="story-title">🚀 Distoversity & Eduveer</div>
-            <div class="story-text">
-                I chose to build. Distoversity merges <b>Psychology (4-Genius)</b> and <b>Tech (AI)</b>. I don't sell degrees; I architect futures.
+        <div style="margin-bottom:22px;">
+            <div style="font-size:1.2em;color:#10B981;font-weight:800;margin-bottom:4px;">📅 <span style="background:#D1FAE5;border-radius:8px;padding:2px 11px 2px 8px;">2024 – Present</span></div>
+            <div style="font-size:1.07em;font-weight:700;">🚀 Distoversity & Eduveer</div>
+            <div style="color:#475569;">
+            I chose to build. Distoversity merges <b>Psychology (4-Genius)</b> and <b>Tech (AI)</b>. I don't sell degrees; I architect futures.
             </div>
         </div>
         """, unsafe_allow_html=True)
