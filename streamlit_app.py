@@ -11,79 +11,73 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
-
-# --- 2. PREMIUM DESIGN SYSTEM (CSS) ---
+# --- FORCE LIGHT THEME CSS (NUCLEAR OPTION) ---
 st.markdown("""
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
-
-    :root {
-        --primary: #0077B6;
-        --primary-dark: #023E8A;
-        --accent: #00B4D8;
-        --bg-light: #F8FAFC;
-        --text-main: #0F172A;
+    /* 1. FORCE WHITE BACKGROUND ON EVERYTHING */
+    [data-testid="stAppViewContainer"], .stApp, header, footer {
+        background-color: #F4F9FD !important;
+        color: #0F172A !important;
     }
-
-    .stApp {
-        background-color: var(--bg-light);
-        font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-
-    /* HEADINGS */
-    h1, h2, h3 { font-family: 'Outfit', sans-serif; color: var(--primary-dark); font-weight: 800; }
     
-    /* STORY CARDS (The Hook) */
-    .story-card {
-        background: white;
-        padding: 25px;
-        border-radius: 15px;
-        border-left: 6px solid var(--primary);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        margin-bottom: 20px;
-        transition: transform 0.3s;
-    }
-    .story-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 119, 182, 0.15);
-    }
-    .story-year {
-        font-size: 0.9rem;
-        font-weight: 700;
-        color: var(--accent);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-    .story-title {
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: var(--text-main);
-        margin: 5px 0;
-    }
-    .story-text {
-        color: #475569;
-        line-height: 1.6;
-    }
-
-    /* SIDEBAR STYLE */
-    section[data-testid="stSidebar"] {
-        background-color: #FFFFFF;
+    /* 2. FORCE SIDEBAR WHITE */
+    section[data-testid="stSidebar"] > div {
+        background-color: #FFFFFF !important;
         border-right: 1px solid #E2E8F0;
     }
+
+    /* 3. FIX TEXT COLORS (Force Dark Blue/Black) */
+    h1, h2, h3, h4, h5, h6, p, span, div, label, li {
+        color: #0F172A !important;
+        -webkit-text-fill-color: #0F172A !important; /* Webkit fix for Samsung */
+    }
     
-    /* CHAT BUBBLES */
-    .stChatMessage { background: transparent; }
+    /* Specific Headers Color */
+    h1, h2, h3 {
+        color: #003366 !important;
+        -webkit-text-fill-color: #003366 !important;
+    }
+
+    /* 4. FIX INPUT BOXES (Samsung often makes these black) */
+    input, textarea, select, div[data-baseweb="select"] {
+        background-color: #FFFFFF !important;
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+        border: 1px solid #CBD5E1 !important;
+    }
     
-    /* BUTTONS */
-    .stButton>button {
-        border-radius: 50px;
-        background: linear-gradient(90deg, #0077B6 0%, #0096C7 100%);
-        color: white;
-        border: none;
-        font-weight: 600;
+    /* 5. FIX CARDS & CONTAINERS */
+    .d-card, .story-card, div[data-testid="stExpander"], .stMarkdown {
+        background-color: #FFFFFF !important;
+        color: #0F172A !important;
+    }
+
+    /* 6. FIX CHAT MESSAGES */
+    /* User Message Bubble */
+    .stChatMessage[data-testid="user-message"] {
+        background-color: #E0F2FE !important;
+        color: #000000 !important;
+    }
+    /* Assistant Message Bubble */
+    .stChatMessage[data-testid="assistant-message"] {
+        background-color: #FFFFFF !important;
+        color: #000000 !important;
+        border: 1px solid #E2E8F0 !important;
+    }
+
+    /* 7. BUTTONS */
+    button {
+        color: #FFFFFF !important;
+        -webkit-text-fill-color: #FFFFFF !important;
+    }
+    
+    /* 8. FIX LINKS */
+    a {
+        color: #0077B6 !important;
+        -webkit-text-fill-color: #0077B6 !important;
     }
     </style>
-    """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True)    
 
 # --- 3. EDUVEER BOT DATA ---
 UNIVERSITIES = [
