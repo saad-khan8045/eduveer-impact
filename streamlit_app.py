@@ -78,6 +78,28 @@ input, textarea, select, div[data-baseweb="select"] {
 </style>
 """, unsafe_allow_html=True)
 
+# --- APP DATA ---
+UNIVERSITIES = [
+    {"name": "Amity Online", "programs": ["MBA", "MCA"], "fee": "₹1.75L", "badges": ["UGC", "NAAC A+"], "best_for": ["Analyst"], "high_pkg": "₹18 LPA"},
+    {"name": "Manipal Jaipur", "programs": ["MBA", "BCA"], "fee": "₹1.50L", "badges": ["AICTE", "NAAC A+"], "best_for": ["Creator"], "high_pkg": "₹14 LPA"},
+    {"name": "LPU Online", "programs": ["MBA", "BA"], "fee": "₹98k", "badges": ["UGC", "AICTE"], "best_for": ["Catalyst"], "high_pkg": "₹12 LPA"},
+    {"name": "NMIMS Global", "programs": ["MBA (Ex)"], "fee": "₹4.0L", "badges": ["Top Ranked"], "best_for": ["Influencer"], "high_pkg": "₹24 LPA"}
+]
+QUESTIONS = [
+    {"q": "When solving problems, you prefer:", "options": [("💡 Innovation", "Creator"), ("🗣️ Discussion", "Influencer"), ("📊 Data", "Analyst"), ("⚡ Action", "Catalyst")]},
+    {"q": "Your ideal workspace:", "options": [("🎨 Studio", "Creator"), ("📢 Boardroom", "Influencer"), ("💻 Lab", "Analyst"), ("🏗️ Field", "Catalyst")]},
+    {"q": "What motivates you?", "options": [("🚀 Creating", "Creator"), ("🤝 Connecting", "Influencer"), ("🔍 Analyzing", "Analyst"), ("✅ Doing", "Catalyst")]}
+]
+PROFILE_DESCRIPTIONS = {
+    "Creator": "Innovative, big-picture, loves launching ideas. Best fit: Product Designer, Brand Builder, Strategy.",
+    "Influencer": "Natural leader, communicator, energizes teams. Best fit: PR, HR, Client Relations, Media.",
+    "Catalyst": "Efficient, action-oriented, gets results. Best fit: Ops Manager, Logistics, Project Execution.",
+    "Analyst": "Precise, data-driven, solves puzzles. Best fit: Finance, Data, Engineering."
+}
+if "step" not in st.session_state: st.session_state.step = 0
+if "q_index" not in st.session_state: st.session_state.q_index = 0
+if "scores" not in st.session_state: st.session_state.scores = {"Creator": 0, "Influencer": 0, "Analyst": 0, "Catalyst": 0}
+
 # --- SIDEBAR ---
 with st.sidebar:
     st.markdown("<h3 style='color:#0077B6;font-weight:800;margin-bottom:3px;'>DISTOVERSITY | EMPOWERING INDIA 🇮🇳</h3>", unsafe_allow_html=True)
@@ -85,27 +107,52 @@ with st.sidebar:
     st.markdown("Founder | EdTech Entrepreneur | Early Childhood & EdTech Leader")
     st.caption("📍 New Delhi, India")
     st.success("🎯 Mission: Replace 'Sales' in education with 'Science', Ethics, and Empowerment.")
-    st.markdown("### 🚀 Key Skills & Domain Expertise")
-    st.markdown("""
-**Teaching & Educational Mentorship**  
-• 10+ years ground teaching & empowerment  
-• Pedagogy, curriculum development, mentorship
 
-**Domain Expertise**  
-• Leadership for Footprints franchise growth (all India)  
-• 2,000+ students personally counseled/advised  
-• Admissions, student guidance (Subharti, Himalayan Garhwal, Noida International, Amity, Manipal, DY Patil, NMIMS)  
-• Power BI, Python, Streamlit analytics for student & franchise insights  
-• Deep child psychology understanding (Footprints Early Ed)  
-• Team Leadership | Ed-Psychology | Business Strategy  
----
-**Our counselling is data-driven, powered by assessment. Cost: ₹999/session.**
-    """)
+    # --- HIGHLIGHTED SKILLS SECTIONS ---
+    st.markdown("""
+<b style='
+    display:block;
+    font-family:Montserrat,sans-serif;
+    color:#19376D;
+    font-size:1.06em;
+    margin-top:8px;
+    margin-bottom:2px;
+'>Teaching & Educational Mentorship</b>
+<div style='font-family:Inter,sans-serif;font-size:1em;font-weight:500;line-height:1.5em;margin-bottom:10px;'>
+    • 10+ years ground teaching & empowerment<br>
+    • Pedagogy, curriculum development, mentorship
+</div>
+<b style='
+    display:block;
+    font-family:Montserrat,sans-serif;
+    font-size:1.16em;
+    color:#0d2e42;
+    background:linear-gradient(90deg,#d8f5f7 85%,#f6f6f9 100%);
+    padding:7px 10px 6px 10px;
+    border-radius:7px;
+    border-left: 5px solid #0077B6;
+    margin-top:2px;margin-bottom:8px;'>
+    Domain Expertise
+</b>
+<div style='font-family:Inter,sans-serif;font-size:1em;font-weight:500;line-height:1.62;margin-left:2px;'>
+    • Leadership for Footprints franchise growth (all India)<br>
+    • 2,000+ students personally counseled/advised<br>
+    • Admissions, student guidance (Subharti, Himalayan Garhwal, Noida International, Amity, Manipal, DY Patil, NMIMS)<br>
+    • Power BI, Python, Streamlit analytics for student & franchise insights<br>
+    • Deep child psychology understanding (Footprints Early Ed)<br>
+    • Team Leadership | Ed-Psychology | Business Strategy
+</div>
+<div style='font-family:Inter,sans-serif;font-size:1em;margin-top:8px;'>
+    <b>Our counselling is <span style='color:#008066;'>data-driven</span>, powered by assessment.<br>
+    <span style='color:#0077B6;'>Cost: ₹999/session.</span></b>
+</div>
+""", unsafe_allow_html=True)
+
     st.markdown(
         """
         <div class="motivate-cta">
         🌟 <b>Ready to discover your energy and direction?</b><br>
-        Let's move beyond confusion and guesswork.  
+        Let's move beyond confusion and guesswork.
         <b>Book a 4D Assessment—let’s plan your next step, together.</b><br>
         <span style="color:#1a7272;">No more random calls. Real futures, real results.<br>
         <b>Sign up for your session now for just ₹999!</b></span>
@@ -126,30 +173,7 @@ with st.sidebar:
         unsafe_allow_html=True
     )
 
-# --- APP DATA ---
-UNIVERSITIES = [
-    {"name": "Amity Online", "programs": ["MBA", "MCA"], "fee": "₹1.75L", "badges": ["UGC", "NAAC A+"], "best_for": ["Analyst"], "high_pkg": "₹18 LPA"},
-    {"name": "Manipal Jaipur", "programs": ["MBA", "BCA"], "fee": "₹1.50L", "badges": ["AICTE", "NAAC A+"], "best_for": ["Creator"], "high_pkg": "₹14 LPA"},
-    {"name": "LPU Online", "programs": ["MBA", "BA"], "fee": "₹98k", "badges": ["UGC", "AICTE"], "best_for": ["Catalyst"], "high_pkg": "₹12 LPA"},
-    {"name": "NMIMS Global", "programs": ["MBA (Ex)"], "fee": "₹4.0L", "badges": ["Top Ranked"], "best_for": ["Influencer"], "high_pkg": "₹24 LPA"}
-]
-QUESTIONS = [
-    {"q": "When solving problems, you prefer:", "options": [("💡 Innovation", "Creator"), ("🗣️ Discussion", "Influencer"), ("📊 Data", "Analyst"), ("⚡ Action", "Catalyst")]},
-    {"q": "Your ideal workspace:", "options": [("🎨 Studio", "Creator"), ("📢 Boardroom", "Influencer"), ("💻 Lab", "Analyst"), ("🏗️ Field", "Catalyst")]},
-    {"q": "What motivates you?", "options": [("🚀 Creating", "Creator"), ("🤝 Connecting", "Influencer"), ("🔍 Analyzing", "Analyst"), ("✅ Doing", "Catalyst")]}
-]
-PROFILE_DESCRIPTIONS = {
-    "Creator": "Innovative, big-picture, loves launching ideas. Best fit: Product Designer, Brand Builder, Strategy.",
-    "Influencer": "Natural leader, communicator, energizes teams. Best fit: PR, HR, Client Relations, Media.",
-    "Catalyst": "Efficient, action-oriented, gets results. Best fit: Ops Manager, Logistics, Project Execution.",
-    "Analyst": "Precise, data-driven, solves puzzles. Best fit: Finance, Data, Engineering."
-}
-if "messages" not in st.session_state: st.session_state.messages = []
-if "step" not in st.session_state: st.session_state.step = 0
-if "q_index" not in st.session_state: st.session_state.q_index = 0
-if "scores" not in st.session_state: st.session_state.scores = {"Creator": 0, "Influencer": 0, "Analyst": 0, "Catalyst": 0}
-if "profile_result" not in st.session_state: st.session_state.profile_result = None
-
+# --- MAIN TABS ---
 tab1, tab2, tab3, tab4 = st.tabs([
     "📖 My Story (The Journey)",
     "🛤️ Why Teach For India?",
