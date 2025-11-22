@@ -8,7 +8,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# --- PROFESSIONAL CLEAN CSS ---
+# --- PROFESSIONAL, CLEAN CSS ---
 st.markdown("""
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -98,7 +98,7 @@ if "scores" not in st.session_state: st.session_state.scores = {"Creator": 0, "I
 if "profile_result" not in st.session_state: st.session_state.profile_result = None
 
 tab1, tab2, tab3, tab4 = st.tabs([
-    "📖 My Story (The Hook)",
+    "📖 My Story (The Journey)",
     "🛤️ Why Teach For India?",
     "🧠 The 4-Genius Framework",
     "🔎 Assessment Demo"
@@ -106,52 +106,74 @@ tab1, tab2, tab3, tab4 = st.tabs([
 
 with tab1:
     st.header("From Classroom to Changemaker: The Distoversity Journey 🚀")
-    st.markdown("##### *Built on real ground work with 2,000+ students and India's leading universities.*")
+    st.markdown("##### Built on real ground work with 2,000+ students and India's leading universities.")
     st.markdown("<h3 style='color:#0077B6;'>EMPOWERING INDIA</h3>", unsafe_allow_html=True)
     st.divider()
     col1, col2 = st.columns([2,1])
     with col1:
         st.markdown("""
-        <div style="margin-bottom:22px;">
-            <div style="font-size:1.13em;color:#0077B6;font-weight:800;margin-bottom:3px;">2015–2019</div>
-            <div style="font-weight:700;">🧑‍🏫 Teaching Roots</div>
-            <div style="color:#475569;">Started as a teacher, understanding real student psychology, motivation, and dreams inside actual classrooms—not just focusing on subjects.</div>
-        </div>
-        <div style="margin-bottom:22px;">
-            <div style="font-size:1.13em;color:#0077B6;font-weight:800;margin-bottom:3px;">2020–2024</div>
-            <div style="font-weight:700;">🎓 University Counseling: 2,000+ Students | Multi-University Specialist</div>
+        <div style="margin-bottom:28px;">
+            <div style="font-size:1.14em;color:#0077B6;font-weight:800;margin-bottom:4px;">2015–2019</div>
+            <div style="font-weight:700;">My Journey Begins: Teaching as Service</div>
             <div style="color:#475569;">
-                For 4+ years I worked closely with students at <span style="color:#003366;font-weight:700;">Subharti, Himalayan Garhwal, Noida International University, Amity, Manipal, DY Patil, NMIMS</span> and more.<br>
-                Personally counseled 2,000+ students & families, positioning them for real success (not transactional admissions).
+            I began on the frontline of Indian education—teaching in real classrooms, connecting with students not only as learners but as dreamers, sons, daughters.  
+            It was here I saw the gaps: children craving guidance, not just grades—kids battling doubts, pressure, and a system that rarely stopped to see who they truly were.  
+            Every day, I witnessed their struggles, their breakthroughs, and learned that education is first about humanity and trust.  
             </div>
         </div>
-        <div style="margin-bottom:22px;">
-            <div style="font-size:1.13em;color:#10B981;font-weight:800;margin-bottom:3px;">2024–Present</div>
-            <div style="font-weight:700;">🏢 Footprints Day Care: Pan-India Franchise Expansion & Child Psychology</div>
+
+        <div style="margin-bottom:28px;">
+            <div style="font-size:1.14em;color:#0077B6;font-weight:800;margin-bottom:4px;">2020–2024</div>
+            <div style="font-weight:700;">Across India’s Top Universities: Learning From 2,000+ Lives</div>
             <div style="color:#475569;">
-                I led franchise expansion across India, learning first-hand about early learning needs, and gained deep domain expertise in child psychology and holistic parent-student empowerment.
+            For four years, I was not just a counselor, but a listener and a guide for young people at  
+            <b>Subharti, Himalayan Garhwal, Noida International University, Amity, Manipal, DY Patil, NMIMS</b> and more.  
+            Every face, every story was different—families coming with hope, confusion, fears about the future.  
+            I didn’t just match students to programs; I helped parents rediscover pride, I helped students make real-life choices.  
+            What I learned: every admission is more than a CRM lead—each is a story, a struggle, a chance to change a life.  
+            2,000+ students counseled, each leaving me wiser, more humble, more determined to fix what’s broken.
             </div>
         </div>
-        <div style="margin-bottom:22px;">
-            <div style="font-size:1.10em;color:#F97316;font-weight:800;margin-bottom:3px;">2024–Present</div>
-            <div style="font-weight:700;">🚀 Distoversity & The 4D Assessment</div>
+
+        <div style="margin-bottom:28px;">
+            <div style="font-size:1.14em;color:#10B981;font-weight:800;margin-bottom:4px;">2024–Present</div>
+            <div style="font-weight:700;">Footprints Day Care: Franchise, Childhood, Psychology</div>
             <div style="color:#475569;">
-            Distoversity unites the wisdom of classrooms, university counseling, and child psychology through its unique <b>4D Assessment</b>: vision, intellect, action, emotion. Today, students are treated as mere customers and sales targets. My system ensures you’re recognized and guided as a person, never a lead.
+            I led franchise growth for Footprints Day Care—traveling across India, I saw how little ones learn, how mothers and fathers dream for their children,  
+            and how school isn’t just an academic ritual: it’s a world of emotional intelligence, personality, mindset.  
+            For me, <b>child psychology</b> became the backbone—understanding what makes learning joyful, what damages a child’s will to grow.  
+            I worked with teams and parents to make every franchise not a business, but a safe space, a launching pad for real destiny.
+            </div>
+        </div>
+
+        <div style="margin-bottom:28px;">
+            <div style="font-size:1.13em;color:#F97316;font-weight:800;margin-bottom:4px;">2024–Present</div>
+            <div style="font-weight:700;">Distoversity and The Four-Dimensional Assessment</div>
+            <div style="color:#475569;">
+            Out of ten years of listening, teaching, counseling, and growing, I built <b>Distoversity</b>—not as a business,  
+            but as a response to a broken market that sees young people as customers, not individuals.  
+            My <b>4D Assessment</b> is not a test—it’s a curriculum to see a person’s full energy: intellect, emotion, action, vision.  
+            It’s different because it refuses to let “call centers” and “sales scripts” decide someone’s future.  
+            It’s my commitment that every conversation, every counseling session, is based on dignity, empathy, and the will to make every child not just successful in exams,  
+            but fulfilled in life.  
+            This is my story, and these are the lessons I pass to every student and every family who trusts Distoversity.
             </div>
         </div>
         """, unsafe_allow_html=True)
     with col2:
-        st.info("🌟 Brand Hook")
         st.markdown("""
-        - 2,000+ lives counseled: Subharti, Himalayan Garhwal, NIU, Amity, Manipal, DY Patil, NMIMS, and more  
-        - Pan-India leadership: Early childhood & franchise growth  
-        - Deep child psychology insight → personalized 4D assessment
-        """, unsafe_allow_html=True)
-        st.success("🎓 Impact: 2,000+ students served | 35% improvement in satisfaction, confidence, and clarity.")
-        st.markdown("""
-        <div class="card" style="margin-top:14px;">
-            <h4>Success Story: Riya</h4>
-            <p>Riya found a future mapped to her strength, thanks to Distoversity guidance—not just a generic degree.</p>
+        <div style="margin-bottom:18px;">
+        <span style="font-size:1.07em;color:#256981;font-weight:700;">Impact Snapshots</span>
+        <ul style="color:#48514F; font-size:1em;">
+            <li>2,000+ students individually counseled, every life a different challenge</li>
+            <li>Worked directly with: Subharti, Himalayan Garhwal, NIU, Amity, Manipal, DY Patil, NMIMS and more</li>
+            <li>Led pan-India franchise expansion for Footprints Day Care</li>
+            <li>Expert in child psychology and real parent empowerment</li>
+            <li>Built the 4D Assessment Model for ethical, dignified guidance—not sales scripts</li>
+        </ul>
+        <div style="margin-top:14px; color:#207150"><b>Success Story: Riya</b><br>
+        Riya found a future mapped to her natural strengths, thanks to Distoversity support—not just selling a generic degree.
+        </div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -182,7 +204,7 @@ with tab3:
             if energy == "Analyst": st.error("📊 Data-driven. Needs clarity. Hates hype.")
 
 with tab4:
-    st.title("🔎 Assessment Demo")  # No mention of AI
+    st.title("🔎 Assessment Demo")
     st.markdown("<h3 style='color:#0077B6;'>EMPOWERING INDIA</h3>", unsafe_allow_html=True)
     st.caption("Distoversity's exclusive 4D Assessment: built on real teaching, counseling, and psychology—never just a sales script.")
     if st.session_state.step == 0:
