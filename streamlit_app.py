@@ -55,13 +55,13 @@ with st.sidebar:
 • 10+ years ground teaching & empowerment  
 • Pedagogy, curriculum development, mentorship  
 
-**Data Analyst & EdTech Solutions**  
-• Power BI, Python, Streamlit, franchise & student analytics  
-
-**Domain Expertise: Franchise Expansion, Counseling**  
+**Domain Expertise**  
 • Leadership for Footprints franchise growth (all India)  
+• 2,000+ students personally counseled/advised  
 • Admissions, student guidance (Subharti, Himalayan Garhwal, Noida International, Amity, Manipal, DY Patil, NMIMS)  
-• Ed-Psychology | Team Leadership | Business Strategy
+• Power BI, Python, Streamlit analytics for student & franchise insights  
+• Deep child psychology understanding (Footprints Early Ed)  
+• Team Leadership | Ed-Psychology | Business Strategy
     """)
     st.markdown("---")
     st.markdown("<b>Privacy Policy:</b> Your data is always safe and confidential.", unsafe_allow_html=True)
