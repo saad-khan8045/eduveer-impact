@@ -82,13 +82,32 @@ if "profile_result" not in st.session_state: st.session_state.profile_result = N
 
 # --- SIDEBAR: BIO, PRIVACY & COPYRIGHT + REDIRECT ---
 with st.sidebar:
-    st.markdown("<h3 style='color:#0077B6;'>DISTOVERSITY | EMPOWERING INDIA 🇮🇳</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='color:#0077B6;font-weight:800;'>DISTOVERSITY | EMPOWERING INDIA 🇮🇳</h3>", unsafe_allow_html=True)
     st.title("Mohd Saad")
     st.markdown("Founder | Ed-Tech Intrapreneur | Early Childhood & EdTech Leader")
     st.caption("📍 New Delhi, India")
     st.success("🎯 Mission: Replace 'Sales' in education with 'Science', Ethics, and Empowerment.")
-    st.markdown("### 🏆 Key Brand Skills & Sectoral Impact")
-    st.code("Python & Streamlit\nLLM & AI Agents\nFranchise Expansion\nEd-Psychology\nEarly Childhood (HighScope)\nCareer Counseling & Holistic Guidance\nTeam Leadership & Analytics")
+    st.markdown("### <span style='color:#19376D;font-size:1.18em;'>🚀 Key Skills & Domain Expertise</span>", unsafe_allow_html=True)
+    st.markdown("""
+    <div style="margin-bottom:12px;">
+        <span style="font-size:1.09em;color:#235789;font-weight:700;">Teaching & Educational Mentorship</span><br>
+        <span style="color:#364958;">• 10+ years in on-ground teaching, student empowerment.<br>
+        • Pedagogy, curriculum design, holistic mentorship.</span>
+    </div>
+    <div style="margin-bottom:12px;">
+        <span style="font-size:1.09em;color:#235789;font-weight:700;">Data Analyst & EdTech Solutions</span><br>
+        <span style="color:#364958;">• Power BI dashboards for franchise & student analytics.<br>
+        • Python, Streamlit & advanced analytics for decision-making.</span>
+    </div>
+    <div style="margin-bottom:12px;">
+        <span style="font-size:1.09em;color:#235789;font-weight:700;">Domain Expertise: Education & Franchise Expansion</span><br>
+        <span style="color:#364958;">• Multi-city franchise growth (Footprints Daycare).<br>
+        • Admissions, career counseling, early childhood (HighScope USA), team leadership & analytics.</span>
+    </div>
+    <div style="margin-bottom:10px;">
+        <span style="font-size:1em;color:#075985;">Ed-Psychology | LLM & AI Agents | Team Leadership | Business Development</span>
+    </div>
+    """, unsafe_allow_html=True)
     st.markdown("---")
     st.markdown("<b>Privacy Policy:</b> Your data is always safe and confidential. We never sell or share personal information.", unsafe_allow_html=True)
     st.markdown("<b>Copyright © 2025 Distoversity.</b> All rights reserved.", unsafe_allow_html=True)
@@ -153,8 +172,8 @@ with tab1:
     with col2:
         st.info("💡 The Distoversity Hook")
         st.markdown("""
-        - Empowerment from classrooms, boardrooms, and EdTech labs.
-        - India’s only platform built from real journeys and data—not hype.
+        - Empowerment from classrooms, boardrooms, and EdTech labs.<br>
+        - India’s only platform built from real journeys and data—not hype.<br>
         - Founder story, sector impact, and brand promise in every line.
         """, unsafe_allow_html=True)
         st.success("🎓 Impact: 2,000+ students served | 35% improved career satisfaction.")
