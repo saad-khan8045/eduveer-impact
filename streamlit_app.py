@@ -11,7 +11,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# --- FORCE LIGHT THEME CSS ---
+# --- PROFESSIONAL VISUAL CSS + SIDEBAR ARROW + MOBILE PROMPT ---
 st.markdown("""
     <style>
     [data-testid="stAppViewContainer"], .stApp, header, footer {
@@ -21,37 +21,35 @@ st.markdown("""
     section[data-testid="stSidebar"] > div {
         background-color: #FFFFFF !important;
         border-right: 1px solid #E2E8F0;
+        width: 330px !important;
+        min-width: 330px !important;
+        position: relative;
     }
-    h1, h2, h3, h4, h5, h6, p, span, div, label, li {
-        color: #0F172A !important;
-        -webkit-text-fill-color: #0F172A !important;
+    .expand-arrow {
+        position: absolute;
+        top: 50%;
+        right: -22px;
+        transform: translateY(-50%);
+        font-size: 2.2em;
+        background: #E0F2FE;
+        border-radius: 50px;
+        padding: 1px 9px;
+        color: #1892d8;
+        box-shadow: 0 2px 6px #dbe7fd;
+        cursor: pointer;
+        transition: background 0.11s;
+        z-index: 100;
     }
-    h1, h2, h3 {
-        color: #003366 !important;
-        -webkit-text-fill-color: #003366 !important;
+    .expand-arrow:hover {
+        background: #bde0fa;
+        color: #0077B6;
     }
-    input, textarea, select, div[data-baseweb="select"] {
-        background-color: #FFFFFF !important;
-        color: #000000 !important;
-        -webkit-text-fill-color: #000000 !important;
-        border: 1px solid #CBD5E1 !important;
+    @media screen and (max-width: 600px) {
+        section[data-testid="stSidebar"] > div {
+            min-width: 95vw !important;
+            width: 95vw !important;
+        }
     }
-    .d-card, .story-card, div[data-testid="stExpander"], .stMarkdown {
-        background-color: #FFFFFF !important;
-        color: #0F172A !important;
-    }
-    .stChatMessage[data-testid="user-message"] {
-        background-color: #E0F2FE !important;
-        color: #000000 !important;
-    }
-    .stChatMessage[data-testid="assistant-message"] {
-        background-color: #FFFFFF !important;
-        color: #000000 !important;
-        border: 1px solid #E2E8F0 !important;
-    }
-    button { color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; }
-    a { color: #0077B6 !important; -webkit-text-fill-color: #0077B6 !important; }
-    .footer-note { font-size:0.9rem; color:#475569 !important; text-align:center; margin-top:20px; }
     </style>
 """, unsafe_allow_html=True)
 
@@ -80,7 +78,7 @@ if "q_index" not in st.session_state: st.session_state.q_index = 0
 if "scores" not in st.session_state: st.session_state.scores = {"Creator": 0, "Influencer": 0, "Analyst": 0, "Catalyst": 0}
 if "profile_result" not in st.session_state: st.session_state.profile_result = None
 
-# --- SIDEBAR: BIO, PRIVACY & COPYRIGHT + REDIRECT ---
+# --- SIDEBAR: BIO, PRIVACY & COPYRIGHT + ARROW + REDIRECT ---
 with st.sidebar:
     st.markdown("<h3 style='color:#0077B6;font-weight:800;'>DISTOVERSITY | EMPOWERING INDIA 🇮🇳</h3>", unsafe_allow_html=True)
     st.title("Mohd Saad")
@@ -108,6 +106,8 @@ with st.sidebar:
         <span style="font-size:1em;color:#075985;">Ed-Psychology | LLM & AI Agents | Team Leadership | Business Development</span>
     </div>
     """, unsafe_allow_html=True)
+    # Sidebar right arrow for expand/collapse visual cue
+    st.markdown("<div class='expand-arrow' title='Expand/Collapse Sidebar'>❯</div>", unsafe_allow_html=True)
     st.markdown("---")
     st.markdown("<b>Privacy Policy:</b> Your data is always safe and confidential. We never sell or share personal information.", unsafe_allow_html=True)
     st.markdown("<b>Copyright © 2025 Distoversity.</b> All rights reserved.", unsafe_allow_html=True)
@@ -220,7 +220,6 @@ with tab4:
     st.title("🤖 Eduveer AI Demo")
     st.markdown("<h3 style='color:#0077B6;'>EMPOWERING INDIA 🇮🇳</h3>", unsafe_allow_html=True)
     st.caption("Logic-based career counselor for every Indian student.")
-
     if st.session_state.step == 0:
         if st.button("Start AI Assessment ➔", type="primary"):
             st.session_state.step = 1
@@ -255,6 +254,13 @@ with tab4:
             st.session_state.q_index = 0
             st.session_state.scores = {"Creator": 0, "Influencer": 0, "Analyst": 0, "Catalyst": 0}
             st.rerun()
+
+# --- MOBILE PROMPT FOR TAB SWITCHING (Below ALL content) ---
+st.markdown("""
+<div style='margin-top:10px; text-align:center;'>
+    <span style="font-size:1.12em; color:#0077B6;"><b>← Swipe or tap arrows to switch tabs</b></span>
+</div>
+""", unsafe_allow_html=True)
 
 # --- FOOTER: PRIVACY & COPYRIGHT ---
 st.markdown("""
