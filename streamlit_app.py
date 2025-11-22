@@ -1,8 +1,6 @@
 import streamlit as st
-import pandas as pd
-import time
-import os
 
+# --- PAGE CONFIGURATION ---
 st.set_page_config(
     page_title="Distoversity | Empowering India",
     page_icon="🚀",
@@ -44,6 +42,7 @@ h1, h2, h3, h4 {
 </style>
 """, unsafe_allow_html=True)
 
+# --- SIDEBAR ---
 with st.sidebar:
     st.markdown("<h3 style='color:#0077B6;font-weight:800;'>DISTOVERSITY | EMPOWERING INDIA 🇮🇳</h3>", unsafe_allow_html=True)
     st.title("Mohd Saad")
@@ -52,24 +51,24 @@ with st.sidebar:
     st.success("🎯 Mission: Replace 'Sales' in education with 'Science', Ethics, and Empowerment.")
     st.markdown("### 🚀 Key Skills & Domain Expertise")
     st.markdown("""
-    **Teaching & Educational Mentorship**
-    • 10+ years ground teaching & empowerment
-    • Pedagogy, curriculum development, mentorship
+**Teaching & Educational Mentorship**  
+• 10+ years ground teaching & empowerment  
+• Pedagogy, curriculum development, mentorship  
 
-    **Data Analyst & EdTech Solutions**
-    • Power BI, Python, Streamlit, franchise & student analytics
+**Data Analyst & EdTech Solutions**  
+• Power BI, Python, Streamlit, franchise & student analytics  
 
-    **Domain Expertise: Franchise Expansion, Counseling**
-    • Leadership in franchise growth (Footprints Daycare)
-    • Admissions, career guidance, early childhood (HighScope USA)
-    • Ed-Psychology | Team Leadership | Business Strategy
+**Domain Expertise: Franchise Expansion, Counseling**  
+• Leadership for Footprints franchise growth (all India)  
+• Admissions, student guidance (Subharti, Himalayan Garhwal, Noida International, Amity, Manipal, DY Patil, NMIMS)  
+• Ed-Psychology | Team Leadership | Business Strategy
     """)
     st.markdown("---")
     st.markdown("<b>Privacy Policy:</b> Your data is always safe and confidential.", unsafe_allow_html=True)
     st.markdown("Copyright © 2025 Distoversity. All rights reserved.", unsafe_allow_html=True)
     st.markdown("[LinkedIn](https://linkedin.com) | [Email](mailto:saad01489@gmail.com)")
     st.markdown("---")
-    st.markdown("## Try our Career Guidance Platform")
+    st.markdown("## Try Our Career Guidance Platform")
     st.markdown(
         "<a href='https://distoversity-mvp-j4pmyhqdjr7v7ukpgwmyx6.streamlit.app/' target='_blank'>👉 Distoversity Career Platform</a>",
         unsafe_allow_html=True
@@ -102,73 +101,74 @@ tab1, tab2, tab3, tab4 = st.tabs([
     "📖 My Story (The Hook)",
     "🛤️ Why Teach For India?",
     "🧠 The 4-Genius Framework",
-    "🔎 Eduveer Assessment Demo"
+    "🔎 Assessment Demo"
 ])
 
 with tab1:
     st.header("From Classroom to Changemaker: The Distoversity Journey 🚀")
-    st.markdown("##### *Built on a decade of ground realities and transformation in Indian education*")
+    st.markdown("##### *Built on real ground work with 2,000+ students and India's leading universities.*")
     st.markdown("<h3 style='color:#0077B6;'>EMPOWERING INDIA</h3>", unsafe_allow_html=True)
     st.divider()
     col1, col2 = st.columns([2,1])
     with col1:
         st.markdown("""
         <div style="margin-bottom:22px;">
-            <div style="font-size:1.1em;color:#0077B6;font-weight:800;margin-bottom:4px;">2015–2019</div>
+            <div style="font-size:1.13em;color:#0077B6;font-weight:800;margin-bottom:3px;">2015–2019</div>
             <div style="font-weight:700;">🧑‍🏫 Teaching Roots</div>
-            <div style="color:#475569;">Started as a teacher, learning student realities & potential. Real education is mentorship, not marks.</div>
+            <div style="color:#475569;">Started as a teacher, understanding real student psychology, motivation, and dreams inside actual classrooms—not just focusing on subjects.</div>
         </div>
         <div style="margin-bottom:22px;">
-            <div style="font-size:1.1em;color:#0077B6;font-weight:800;margin-bottom:4px;">2020–2021</div>
-            <div style="font-weight:700;">🏢 Industry Insight</div>
-            <div style="color:#475569;">Oppo & Yazaki—corporate scale, but always with a purpose: education transformation.</div>
-        </div>
-        <div style="margin-bottom:22px;">
-            <div style="font-size:1.1em;color:#F97316;font-weight:800;margin-bottom:4px;">2021–2025</div>
-            <div style="font-weight:700;">🎓 Counseling & Leadership</div>
-            <div style="color:#475569;">2,000+ students guided as counselor, architecting careers (Amity, Manipal, NMIMS, UNIVO...). Transformation, not transactions.</div>
-        </div>
-        <div style="margin-bottom:28px;">
-            <div style="font-size:1.09em;color:#10B981;font-weight:800;margin-bottom:4px;">2024–Present</div>
-            <div style="font-weight:700;">🚀 Distoversity Brand & 4D Assessment</div>
+            <div style="font-size:1.13em;color:#0077B6;font-weight:800;margin-bottom:3px;">2020–2024</div>
+            <div style="font-weight:700;">🎓 University Counseling: 2,000+ Students | Multi-University Specialist</div>
             <div style="color:#475569;">
-            Founded India's first platform to combine ground expertise, tech, and holistic curriculum for unbiased, personalized guidance.<br>
-            <span style="font-weight:700;color:#0077B6;">The 4D Assessment:</span> After a decade of teaching and counseling, I created this unique profiling approach to measure the <b>four core energies</b>—your vision, intellect, action, and emotion. <br>
-            Why? Because today's market treats every student like a customer; after course enquiry, sales calls start, students lose their identity. <br>
-            Distoversity refuses to play that game: our 4D assessment discovers who you <b>actually are</b>, not what you can be sold.<br>
-            <b>It's important today because students deserve personalized, ethical, empowering counseling—not becoming just a lead in a CRM.</b>
+                For 4+ years I worked closely with students at <span style="color:#003366;font-weight:700;">Subharti, Himalayan Garhwal, Noida International University, Amity, Manipal, DY Patil, NMIMS</span> and more.<br>
+                Personally counseled 2,000+ students & families, positioning them for real success (not transactional admissions).
+            </div>
+        </div>
+        <div style="margin-bottom:22px;">
+            <div style="font-size:1.13em;color:#10B981;font-weight:800;margin-bottom:3px;">2024–Present</div>
+            <div style="font-weight:700;">🏢 Footprints Day Care: Pan-India Franchise Expansion & Child Psychology</div>
+            <div style="color:#475569;">
+                I led franchise expansion across India, learning first-hand about early learning needs, and gained deep domain expertise in child psychology and holistic parent-student empowerment.
+            </div>
+        </div>
+        <div style="margin-bottom:22px;">
+            <div style="font-size:1.10em;color:#F97316;font-weight:800;margin-bottom:3px;">2024–Present</div>
+            <div style="font-weight:700;">🚀 Distoversity & The 4D Assessment</div>
+            <div style="color:#475569;">
+            Distoversity unites the wisdom of classrooms, university counseling, and child psychology through its unique <b>4D Assessment</b>: vision, intellect, action, emotion. Today, students are treated as mere customers and sales targets. My system ensures you’re recognized and guided as a person, never a lead.
             </div>
         </div>
         """, unsafe_allow_html=True)
     with col2:
         st.info("🌟 Brand Hook")
         st.markdown("""
-        - Ground-learned approach, not course salesmanship.<br>
-        - Impact: 2,000+ careers transformed.<br>
-        - 4D Assessment—your story, your energy, your future.
+        - 2,000+ lives counseled: Subharti, Himalayan Garhwal, NIU, Amity, Manipal, DY Patil, NMIMS, and more  
+        - Pan-India leadership: Early childhood & franchise growth  
+        - Deep child psychology insight → personalized 4D assessment
         """, unsafe_allow_html=True)
-        st.success("🎓 Impact: 2,000+ students served | 35% improved career satisfaction.")
+        st.success("🎓 Impact: 2,000+ students served | 35% improvement in satisfaction, confidence, and clarity.")
         st.markdown("""
         <div class="card" style="margin-top:14px;">
             <h4>Success Story: Riya</h4>
-            <p>Riya matched her skills to her destiny, not just a degree, thanks to personalized guidance.</p>
+            <p>Riya found a future mapped to her strength, thanks to Distoversity guidance—not just a generic degree.</p>
         </div>
         """, unsafe_allow_html=True)
 
 with tab2:
     st.header("Why Distoversity? Why Teach For India?")
     st.markdown("""
-    - Every learner deserves ethical, world-class guidance.
-    - Real impact means lives transformed, not deals closed.
-    - Blending AI, psychology, and ground wisdom for the right path.
-    - India's next mentorship movement—hope, credibility, scaling futures.
+    - Every learner deserves ethical, person-first guidance—not just admissions salesmanship or CRM-driven calls.
+    - Real impact = lives transformed (not just enrolled).
+    - Blending data, psychology, and ground wisdom for every unique story.
+    - India's next mentorship movement—trust, credibility, and real student energy.
     """)
-    st.success("🌱 Together, let's build India's new generation of empowered learners.")
+    st.success("🌱 Together, let's build India's next empowered generation.")
     st.info("🤝 Ready to collaborate: [Connect on LinkedIn](https://linkedin.com)")
 
 with tab3:
     st.header("We don't ask for Marks. We ask for Energy.")
-    st.write("Distoversity philosophy: Guidance should measure energy, not only ability. Every child has unique strengths.")
+    st.write("Distoversity believes real guidance measures your energy, not just academic ability or exam marks.")
     st.markdown("<h3 style='color:#0077B6;'>EMPOWERING INDIA</h3>", unsafe_allow_html=True)
     c1, c2 = st.columns(2)
     with c1:
@@ -182,9 +182,9 @@ with tab3:
             if energy == "Analyst": st.error("📊 Data-driven. Needs clarity. Hates hype.")
 
 with tab4:
-    st.title("🔎 Eduveer Assessment Demo")
+    st.title("🔎 Assessment Demo")  # No mention of AI
     st.markdown("<h3 style='color:#0077B6;'>EMPOWERING INDIA</h3>", unsafe_allow_html=True)
-    st.caption("Career profiler powered by Distoversity's exclusive 4D Assessment. No misleading AI dependency—our method is based on real educator insight.")
+    st.caption("Distoversity's exclusive 4D Assessment: built on real teaching, counseling, and psychology—never just a sales script.")
     if st.session_state.step == 0:
         if st.button("Start Assessment ➔", type="primary"):
             st.session_state.step = 1
