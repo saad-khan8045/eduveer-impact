@@ -10,72 +10,28 @@ st.set_page_config(
 
 # --- FORCE LIGHT THEME & MOBILE OPTIMIZE ---
 st.markdown("""
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<style>
-html, body, [data-testid="stAppViewContainer"], .stApp, .main {
-    background-color: #F4F9FD !important;
-    color: #0F172A !important;
-    font-family: "Inter", "Montserrat", Arial, sans-serif !important;
-    font-size: 1.01em;
-}
-h1, h2, h3, h4, h5 {
-    font-family: "Montserrat", Arial, sans-serif !important;
-    color: #19376D !important;
-    font-weight: 700;
-}
-section[data-testid="stSidebar"] > div {
-    background-color: #FFFFFF !important;
-    color: #0F172A !important;
-    border-right: 1px solid #E2E8F0;
-    width: 310px !important;
-    min-width: 290px !important;
-    max-width: 99vw !important;
-    padding-right: 10px !important;
-    box-sizing: border-box;
-}
-.stMarkdown, div, p, label { font-family: "Inter", Arial, sans-serif !important; }
-input, textarea, select, div[data-baseweb="select"] {
-    background-color: #FFFFFF !important;
-    color: #000 !important;
-    border: 1px solid #CBD5E1 !important;
-}
-.stButton>button {
-    color: #fff !important;
-    background: #0077B6 !important;
-    border-radius: 6px !important;
-    font-weight: 500 !important;
-}
-.motivate-cta {
-    background: linear-gradient(100deg, #e0f2fe 70%, #bbf7d0 100%);
-    border: 1.5px solid #bae6fd;
-    border-radius: 8px;
-    padding: 15px 14px;
-    margin: 20px 0 10px 0;
-    font-size: 1.09em;
-    color: #134e4a;
-    text-align: left;
-    box-shadow: 0 2px 16px #c7f9f8;
-    font-weight: 500;
-}
-@media screen and (max-width: 600px) {
-    html, body, [data-testid="stAppViewContainer"], .stApp, .main {
-        font-size: 1.05em;
-    }
-    section[data-testid="stSidebar"] > div {
-        min-width: 97vw !important;
-        width: 97vw !important;
-        font-size: 1.01em;
-        padding-right: 2vw !important;
-    }
-    .footer-note { font-size:0.94em !important; }
-    .motivate-cta { font-size: 1em; }
-}
-.footer-note {
-    font-size:0.93em; color:#758fa0 !important; text-align:center; margin-top:18px;
-    font-family:"Montserrat",Arial,sans-serif !important;
-    margin-bottom:10px;
-}
-</style>
+<b style='
+    display:block;
+    font-family:Montserrat,sans-serif;
+    font-size:1.15em;
+    letter-spacing:0.01em;
+    color:#0d2e42;
+    margin-top:12px;margin-bottom:8px;
+    background:linear-gradient(90deg,#d8f5f7 85%,#f6f6f9 100%);
+    padding:7px 10px 6px 10px;
+    border-radius:7px;
+    border-left: 5px solid #0077B6;
+'>
+    Domain Expertise
+</b>
+<div style='font-family:Inter,sans-serif;font-size:1em;font-weight:500;line-height:1.6;margin-bottom:11px;margin-left:2px;'>
+    • Leadership for Footprints franchise growth (all India)<br>
+    • 2,000+ students personally counseled/advised<br>
+    • Admissions, student guidance (Subharti, Himalayan Garhwal, Noida International, Amity, Manipal, DY Patil, NMIMS)<br>
+    • Power BI, Python, Streamlit analytics for student & franchise insights<br>
+    • Deep child psychology understanding (Footprints Early Ed)<br>
+    • Team Leadership | Ed-Psychology | Business Strategy
+</div>
 """, unsafe_allow_html=True)
 
 # --- SIDEBAR ---
