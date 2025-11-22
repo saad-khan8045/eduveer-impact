@@ -8,7 +8,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# --- FORCE LIGHT THEME ON ALL DEVICES: STRONG OVERRIDE ---
+# --- FORCE LIGHT THEME & MOBILE OPTIMIZE ---
 st.markdown("""
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -16,32 +16,22 @@ html, body, [data-testid="stAppViewContainer"], .stApp, .main {
     background-color: #F4F9FD !important;
     color: #0F172A !important;
     font-family: "Inter", "Montserrat", Arial, sans-serif !important;
-}
-/* Override any forced dark mode or OS settings */
-@media (prefers-color-scheme: dark) {
-    html, body, [data-testid="stAppViewContainer"], .stApp, .main {
-        background-color: #F4F9FD !important;
-        color: #0F172A !important;
-    }
-    section[data-testid="stSidebar"] > div {
-        background-color: #FFF !important;
-        color: #0F172A !important;
-    }
-}
-/* Sidebar, headings, form, and inputs */
-section[data-testid="stSidebar"] > div {
-    background-color: #FFFFFF !important;
-    color: #0F172A !important;
-    border-right: 1px solid #E2E8F0;
-    width: 320px !important;
-    min-width: 320px !important;
-    max-width: 99vw !important;
-    box-sizing: border-box;
+    font-size: 1.01em;
 }
 h1, h2, h3, h4, h5 {
     font-family: "Montserrat", Arial, sans-serif !important;
     color: #19376D !important;
     font-weight: 700;
+}
+section[data-testid="stSidebar"] > div {
+    background-color: #FFFFFF !important;
+    color: #0F172A !important;
+    border-right: 1px solid #E2E8F0;
+    width: 310px !important;
+    min-width: 290px !important;
+    max-width: 99vw !important;
+    padding-right: 10px !important;
+    box-sizing: border-box;
 }
 .stMarkdown, div, p, label { font-family: "Inter", Arial, sans-serif !important; }
 input, textarea, select, div[data-baseweb="select"] {
@@ -55,23 +45,42 @@ input, textarea, select, div[data-baseweb="select"] {
     border-radius: 6px !important;
     font-weight: 500 !important;
 }
-/* For all devices */
+.motivate-cta {
+    background: linear-gradient(100deg, #e0f2fe 70%, #bbf7d0 100%);
+    border: 1.5px solid #bae6fd;
+    border-radius: 8px;
+    padding: 15px 14px;
+    margin: 20px 0 10px 0;
+    font-size: 1.09em;
+    color: #134e4a;
+    text-align: left;
+    box-shadow: 0 2px 16px #c7f9f8;
+    font-weight: 500;
+}
 @media screen and (max-width: 600px) {
+    html, body, [data-testid="stAppViewContainer"], .stApp, .main {
+        font-size: 1.05em;
+    }
     section[data-testid="stSidebar"] > div {
         min-width: 97vw !important;
         width: 97vw !important;
+        font-size: 1.01em;
+        padding-right: 2vw !important;
     }
+    .footer-note { font-size:0.94em !important; }
+    .motivate-cta { font-size: 1em; }
 }
 .footer-note {
-    font-size:0.95em; color:#758fa0 !important; text-align:center; margin-top:30px;
+    font-size:0.93em; color:#758fa0 !important; text-align:center; margin-top:18px;
     font-family:"Montserrat",Arial,sans-serif !important;
+    margin-bottom:10px;
 }
 </style>
 """, unsafe_allow_html=True)
 
 # --- SIDEBAR ---
 with st.sidebar:
-    st.markdown("<h3 style='color:#0077B6;font-weight:800;'>DISTOVERSITY | EMPOWERING INDIA 🇮🇳</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='color:#0077B6;font-weight:800;margin-bottom:3px;'>DISTOVERSITY | EMPOWERING INDIA 🇮🇳</h3>", unsafe_allow_html=True)
     st.title("Mohd Saad")
     st.markdown("Founder | EdTech Entrepreneur | Early Childhood & EdTech Leader")
     st.caption("📍 New Delhi, India")
@@ -80,7 +89,7 @@ with st.sidebar:
     st.markdown("""
 **Teaching & Educational Mentorship**  
 • 10+ years ground teaching & empowerment  
-• Pedagogy, curriculum development, mentorship  
+• Pedagogy, curriculum development, mentorship
 
 **Domain Expertise**  
 • Leadership for Footprints franchise growth (all India)  
@@ -88,8 +97,24 @@ with st.sidebar:
 • Admissions, student guidance (Subharti, Himalayan Garhwal, Noida International, Amity, Manipal, DY Patil, NMIMS)  
 • Power BI, Python, Streamlit analytics for student & franchise insights  
 • Deep child psychology understanding (Footprints Early Ed)  
-• Team Leadership | Ed-Psychology | Business Strategy
+• Team Leadership | Ed-Psychology | Business Strategy  
+---
+**Our counselling is data-driven, powered by assessment. Cost: ₹999/session.**
     """)
+    st.markdown(
+        """
+        <div class="motivate-cta">
+        🌟 <b>Ready to discover your energy and direction?</b><br>
+        Let's move beyond confusion and guesswork.  
+        <b>Book a 4D Assessment—let’s plan your next step, together.</b><br>
+        <span style="color:#1a7272;">No more random calls. Real futures, real results.<br>
+        <b>Sign up for your session now for just ₹999!</b></span>
+        <br>
+        <a href='mailto:saad01489@gmail.com?subject=Book%20my%204D%20Assessment%20Session' target="_blank"><button style='margin-top:6px; background: #059669; color: #fff; border:none; border-radius:5px; padding:7px 18px; font-size:1em; font-weight:600;'>Book My Session</button></a>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
     st.markdown("---")
     st.markdown("<b>Privacy Policy:</b> Your data is always safe and confidential.", unsafe_allow_html=True)
     st.markdown("Copyright © 2025 Distoversity. All rights reserved.", unsafe_allow_html=True)
@@ -101,6 +126,7 @@ with st.sidebar:
         unsafe_allow_html=True
     )
 
+# --- APP DATA ---
 UNIVERSITIES = [
     {"name": "Amity Online", "programs": ["MBA", "MCA"], "fee": "₹1.75L", "badges": ["UGC", "NAAC A+"], "best_for": ["Analyst"], "high_pkg": "₹18 LPA"},
     {"name": "Manipal Jaipur", "programs": ["MBA", "BCA"], "fee": "₹1.50L", "badges": ["AICTE", "NAAC A+"], "best_for": ["Creator"], "high_pkg": "₹14 LPA"},
@@ -234,6 +260,17 @@ with tab4:
     st.title("🔎 Assessment Demo")
     st.markdown("<h3 style='color:#0077B6;'>EMPOWERING INDIA</h3>", unsafe_allow_html=True)
     st.caption("Distoversity's exclusive 4D Assessment: built on real teaching, counseling, and psychology—never just a sales script.")
+    st.markdown("""
+    <div class="motivate-cta">
+    🌟 <b>Ready to discover your energy and direction?</b><br>
+    Let's move beyond confusion and guesswork.<br>
+    <b>Our counselling is data-driven. Every session is powered by 4D Assessment.<br>
+    Cost: ₹999/session.</b><br><br>
+    <a href='mailto:saad01489@gmail.com?subject=Book%20my%204D%20Assessment%20Session' target="_blank"><button style='margin-top:5px; background: #059669; color: #fff; border:none; border-radius:5px; padding:9px 20px; font-size:1.09em; font-weight:700;'>Book My Session Now</button></a>
+    <br>
+    <span style="color:#187180;"><b>No more random sales calls. Real futures guided, not guessed.</b></span>
+    </div>
+    """, unsafe_allow_html=True)
     if st.session_state.step == 0:
         if st.button("Start Assessment ➔", type="primary"):
             st.session_state.step = 1
