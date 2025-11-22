@@ -124,7 +124,7 @@ with st.sidebar:
     • Team Leadership | Ed-Psychology | Business Strategy
 </div>
 <div style='font-family:Inter,sans-serif;font-size:1em;margin-top:8px;'>
-    <b>Our counselling is <span style='color:#008066;'>data-driven</span>, powered by assessment.<br>
+    <b>Our counselling is <span style='color:#008066;'>data-driven</span>, powered by 4D Assessment .<br>
     <span style='color:#0077B6;'>Cost: ₹999/session.</span></b>
 </div>
 """, unsafe_allow_html=True)
@@ -134,11 +134,11 @@ with st.sidebar:
         <div class="motivate-cta">
         🌟 <b>Ready to discover your energy and direction?</b><br>
         Let's move beyond confusion and guesswork.
-        <b>Book a 4D Assessment—let’s plan your next step, together.</b><br>
+        <b>Book a 4D 4D Assessment —let’s plan your next step, together.</b><br>
         <span style="color:#1a7272;">No more random calls. Real futures, real results.<br>
         <b>Sign up for your session now for just ₹999!</b></span>
         <br>
-        <a href='mailto:saad01489@gmail.com?subject=Book%20my%204D%20Assessment%20Session' target="_blank"><button style='margin-top:6px; background: #059669; color: #fff; border:none; border-radius:5px; padding:7px 18px; font-size:1em; font-weight:600;'>Book My Session</button></a>
+        <a href='mailto:saad01489@gmail.com?subject=Book%20my%204D%204D Assessment %20Session' target="_blank"><button style='margin-top:6px; background: #059669; color: #fff; border:none; border-radius:5px; padding:7px 18px; font-size:1em; font-weight:600;'>Book My Session</button></a>
         </div>
         """,
         unsafe_allow_html=True
@@ -159,7 +159,7 @@ tab1, tab2, tab3, tab4 = st.tabs([
     "📖 My Story (The Journey)",
     "🛤️ Why Teach For India?",
     "🧠 The 4-Genius Framework",
-    "🔎 Assessment Demo"
+    "🔎 4D Assessment  Demo"
 ])
 
 with tab1:
@@ -206,11 +206,11 @@ with tab1:
 
         <div style="margin-bottom:28px;">
             <div style="font-size:1.13em;color:#F97316;font-weight:800;margin-bottom:4px;">2024–Present</div>
-            <div style="font-weight:700;">Distoversity and The Four-Dimensional Assessment</div>
+            <div style="font-weight:700;">Distoversity and The Four-Dimensional 4D Assessment </div>
             <div style="color:#475569;">
             Out of ten years of listening, teaching, counseling, and growing, I built <b>Distoversity</b>—not as a business,  
             but as a response to a broken market that sees young people as customers, not individuals.  
-            My <b>4D Assessment</b> is not a test—it’s a curriculum to see a person’s full energy: intellect, emotion, action, vision.  
+            My <b>4D 4D Assessment </b> is not a test—it’s a curriculum to see a person’s full energy: intellect, emotion, action, vision.  
             It’s different because it refuses to let “call centers” and “sales scripts” decide someone’s future.  
             It’s my commitment that every conversation, every counseling session, is based on dignity, empathy, and the will to make every child not just successful in exams,  
             but fulfilled in life.  
@@ -227,7 +227,7 @@ with tab1:
             <li>Worked directly with: Subharti, Himalayan Garhwal, NIU, Amity, Manipal, DY Patil, NMIMS and more</li>
             <li>Led pan-India franchise expansion for Footprints Day Care</li>
             <li>Expert in child psychology and real parent empowerment</li>
-            <li>Built the 4D Assessment Model for ethical, dignified guidance—not sales scripts</li>
+            <li>Built the 4D 4D Assessment  Model for ethical, dignified guidance—not sales scripts</li>
         </ul>
         <div style="margin-top:14px; color:#207150"><b>Success Story: Riya</b><br>
         Riya found a future mapped to her natural strengths, thanks to Distoversity support—not just selling a generic degree.
@@ -262,22 +262,22 @@ with tab3:
             if energy == "Analyst": st.error("📊 Data-driven. Needs clarity. Hates hype.")
 
 with tab4:
-    st.title("🔎 Assessment Demo")
+    st.title("🔎 4D Assessment  Demo")
     st.markdown("<h3 style='color:#0077B6;'>EMPOWERING INDIA</h3>", unsafe_allow_html=True)
-    st.caption("Distoversity's exclusive 4D Assessment: built on real teaching, counseling, and psychology—never just a sales script.")
+    st.caption("Distoversity's exclusive 4D 4D Assessment : built on real teaching, counseling, and psychology—never just a sales script.")
     st.markdown("""
     <div class="motivate-cta">
     🌟 <b>Ready to discover your energy and direction?</b><br>
     Let's move beyond confusion and guesswork.<br>
-    <b>Our counselling is data-driven. Every session is powered by 4D Assessment.<br>
+    <b>Our counselling is data-driven. Every session is powered by 4D 4D Assessment .<br>
     Cost: ₹999/session.</b><br><br>
-    <a href='mailto:saad01489@gmail.com?subject=Book%20my%204D%20Assessment%20Session' target="_blank"><button style='margin-top:5px; background: #059669; color: #fff; border:none; border-radius:5px; padding:9px 20px; font-size:1.09em; font-weight:700;'>Book My Session Now</button></a>
+    <a href='mailto:saad01489@gmail.com?subject=Book%20my%204D%204D Assessment %20Session' target="_blank"><button style='margin-top:5px; background: #059669; color: #fff; border:none; border-radius:5px; padding:9px 20px; font-size:1.09em; font-weight:700;'>Book My Session Now</button></a>
     <br>
     <span style="color:#187180;"><b>No more random sales calls. Real futures guided, not guessed.</b></span>
     </div>
     """, unsafe_allow_html=True)
     if st.session_state.step == 0:
-        if st.button("Start Assessment ➔", type="primary"):
+        if st.button("Start 4D Assessment  ➔", type="primary"):
             st.session_state.step = 1
             st.rerun()
     elif st.session_state.step == 1:
