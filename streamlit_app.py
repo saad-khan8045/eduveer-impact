@@ -1,6 +1,5 @@
 import streamlit as st
 
-# --- PAGE CONFIG ---
 st.set_page_config(
     page_title="Distoversity | Empowering India",
     page_icon="🎓",
@@ -8,7 +7,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# --- UNIVERSAL CSS FOR FONTS/STYLE ---
+# --- UNIFIED FONTS AND COLORS ---
 st.markdown("""
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -24,12 +23,12 @@ h1, h2, h3, h4, h5 {
     font-weight: 900 !important;
 }
 @media screen and (max-width: 650px) {
-    html, body, [data-testid="stAppViewContainer"], .stApp, .main { font-size: 1.07em; }
+    html, body, [data-testid="stAppViewContainer"], .stApp, .main { font-size: 1.06em; }
 }
 </style>
 """, unsafe_allow_html=True)
 
-# --- SIDEBAR (PROFESSIONAL/LINKED TO WEBSITE) ---
+# ---- SIDEBAR: Website-Grade, Visually Matched, Professional ----
 with st.sidebar:
     st.markdown("<span style='font-family:Montserrat,sans-serif;font-size:2em;font-weight:900;color:#003366;'>DISTOVERSITY</span> <span style='font-size:1.18em;'>| EMPOWERING INDIA</span>", unsafe_allow_html=True)
     st.title("Mohd Saad")
@@ -63,7 +62,6 @@ with st.sidebar:
       </div>
     </div>
     """, unsafe_allow_html=True)
-
     st.markdown("""
     <div style="background:linear-gradient(110deg,#e0f2fe,#c5fdd6);border-radius:12px;padding:18px 14px 12px 14px;
         border:1.5px solid #bae6fd;margin-bottom:16px;box-shadow:0 3px 18px #c6f9f866; font-family: Inter, sans-serif;">
@@ -80,7 +78,6 @@ with st.sidebar:
     <span style='background:#e7f7e7;color:#308045;border-radius:7px;font-size:0.88em;font-weight:600;display:inline-block;padding:3px 9px;margin-top:8px;'>Proud Alison Community Member</span>
     </div>
     """, unsafe_allow_html=True)
-
     st.markdown("<div style='font-family:Inter,sans-serif;font-size:1em;margin-bottom:5px;color:#126064;'>🔒 <b>We are NOT selling your data</b>. Your privacy is 100% protected.</div>", unsafe_allow_html=True)
     st.markdown("<div style='font-family:Inter,sans-serif;color:#516984;font-size:0.97em;margin-bottom:2px;'>Copyright © 2025 Distoversity. All rights reserved.</div>", unsafe_allow_html=True)
     st.markdown("<div style='font-family:Inter,sans-serif;font-size:0.96em;'><a href='https://linkedin.com' target='_blank'>LinkedIn</a> | <a href='mailto:saad01489@gmail.com'>Email</a></div>", unsafe_allow_html=True)
@@ -88,10 +85,10 @@ with st.sidebar:
     st.markdown("<div style='font-family:Montserrat,sans-serif;font-weight:700;font-size:1.01em;'>Try Our Career Guidance Platform</div>", unsafe_allow_html=True)
     st.markdown("<a href='https://distoversity-mvp-j4pmyhqdjr7v7ukpgwmyx6.streamlit.app/' target='_blank' style='background:#e0f2fe;padding:7px 16px;font-weight:600;color:#0077B6;border-radius:7px;font-size:0.98em;display:inline-block;text-decoration:none;margin-top:7px;'>👉 Distoversity Career Platform</a>", unsafe_allow_html=True)
 
-# --- MAIN CONTENT: PASTE YOUR TABS/BODY CODE FROM PREVIOUS FINAL VERSION HERE ---
-# (For brevity, I'm omitting here - just paste your tab1, tab2, tab3, tab4 main code after this block!)
+# --- BODY/TABS CODE ---
+# (Paste your tabbed content, quizzes, stories etc. here as in prior working code. No further changes needed.)
 
-# --- Footer ---
+# --- OPTIONAL: Matched Footer ---
 st.markdown("""
 <div style='font-family:Inter,sans-serif;font-size:0.97em;color:#516984;text-align:center;margin-top:22px;'>
 Distoversity | Your Career Success Partner 🎓<br>
