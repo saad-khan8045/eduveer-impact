@@ -210,7 +210,7 @@ with tab1:
             <div style="color:#475569;">
             Out of ten years of listening, teaching, counseling, and growing, I built <b>Distoversity</b>—not as a business,  
             but as a response to a broken market that sees young people as customers, not individuals.  
-            My <b>4D 4D Assessment </b> is not a test—it’s a curriculum to see a person’s full energy: intellect, emotion, action, vision.  
+            My <b> 4D Assessment </b> is not a test—it’s a curriculum to see a person’s full energy: intellect, emotion, action, vision.  
             It’s different because it refuses to let “call centers” and “sales scripts” decide someone’s future.  
             It’s my commitment that every conversation, every counseling session, is based on dignity, empathy, and the will to make every child not just successful in exams,  
             but fulfilled in life.  
@@ -227,7 +227,7 @@ with tab1:
             <li>Worked directly with: Subharti, Himalayan Garhwal, NIU, Amity, Manipal, DY Patil, NMIMS and more</li>
             <li>Led pan-India franchise expansion for Footprints Day Care</li>
             <li>Expert in child psychology and real parent empowerment</li>
-            <li>Built the 4D 4D Assessment  Model for ethical, dignified guidance—not sales scripts</li>
+            <li>Built the 4D Assessment  Model for ethical, dignified guidance—not sales scripts</li>
         </ul>
         <div style="margin-top:14px; color:#207150"><b>Success Story: Riya</b><br>
         Riya found a future mapped to her natural strengths, thanks to Distoversity support—not just selling a generic degree.
@@ -264,12 +264,12 @@ with tab3:
 with tab4:
     st.title("🔎 4D Assessment  Demo")
     st.markdown("<h3 style='color:#0077B6;'>EMPOWERING INDIA</h3>", unsafe_allow_html=True)
-    st.caption("Distoversity's exclusive 4D 4D Assessment : built on real teaching, counseling, and psychology—never just a sales script.")
+    st.caption("Distoversity's exclusive 4D Assessment : built on real teaching, counseling, and psychology—never just a sales script.")
     st.markdown("""
     <div class="motivate-cta">
     🌟 <b>Ready to discover your energy and direction?</b><br>
     Let's move beyond confusion and guesswork.<br>
-    <b>Our counselling is data-driven. Every session is powered by 4D 4D Assessment .<br>
+    <b>Our counselling is data-driven. Every session is powered by 4D Assessment .<br>
     Cost: ₹999/session.</b><br><br>
     <a href='mailto:saad01489@gmail.com?subject=Book%20my%204D%204D Assessment %20Session' target="_blank"><button style='margin-top:5px; background: #059669; color: #fff; border:none; border-radius:5px; padding:9px 20px; font-size:1.09em; font-weight:700;'>Book My Session Now</button></a>
     <br>
