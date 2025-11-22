@@ -1,17 +1,15 @@
 import streamlit as st
-import pandas as pd
 import time
-import os
 
-# --- PAGE CONFIGURATION ---
+# ----- PAGE CONFIG -----
 st.set_page_config(
-    page_title="Distoversity | Empowering India",
+    page_title="Distoversity | Mohd Saad – Empowering India",
     page_icon="🚀",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# --- FORCE LIGHT THEME CSS ---
+# ----- LIGHT THEME CSS -----
 st.markdown("""
     <style>
     [data-testid="stAppViewContainer"], .stApp, header, footer {
@@ -40,201 +38,86 @@ st.markdown("""
         background-color: #FFFFFF !important;
         color: #0F172A !important;
     }
-    .stChatMessage[data-testid="user-message"] {
-        background-color: #E0F2FE !important;
-        color: #000000 !important;
-    }
-    .stChatMessage[data-testid="assistant-message"] {
-        background-color: #FFFFFF !important;
-        color: #000000 !important;
-        border: 1px solid #E2E8F0 !important;
-    }
-    button { color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; }
+    .footer-note { font-size:0.98rem; color:#475569 !important; text-align:center; margin-top:20px; }
     a { color: #0077B6 !important; -webkit-text-fill-color: #0077B6 !important; }
-    .footer-note { font-size:0.9rem; color:#475569 !important; text-align:center; margin-top:20px; }
     </style>
 """, unsafe_allow_html=True)
 
-# --- UNIVERSITY & QUIZ DATA ---
-UNIVERSITIES = [
-    {"name": "Amity Online", "programs": ["MBA", "MCA"], "fee": "₹1.75L", "badges": ["UGC", "NAAC A+"], "best_for": ["Analyst"], "high_pkg": "₹18 LPA"},
-    {"name": "Manipal Jaipur", "programs": ["MBA", "BCA"], "fee": "₹1.50L", "badges": ["AICTE", "NAAC A+"], "best_for": ["Creator"], "high_pkg": "₹14 LPA"},
-    {"name": "LPU Online", "programs": ["MBA", "BA"], "fee": "₹98k", "badges": ["UGC", "AICTE"], "best_for": ["Catalyst"], "high_pkg": "₹12 LPA"},
-    {"name": "NMIMS Global", "programs": ["MBA (Ex)"], "fee": "₹4.0L", "badges": ["Top Ranked"], "best_for": ["Influencer"], "high_pkg": "₹24 LPA"}
-]
-QUESTIONS = [
-    {"q": "When solving problems, you prefer:", "options": [("💡 Innovation", "Creator"), ("🗣️ Discussion", "Influencer"), ("📊 Data", "Analyst"), ("⚡ Action", "Catalyst")]},
-    {"q": "Your ideal workspace:", "options": [("🎨 Studio", "Creator"), ("📢 Boardroom", "Influencer"), ("💻 Lab", "Analyst"), ("🏗️ Field", "Catalyst")]},
-    {"q": "What motivates you?", "options": [("🚀 Creating", "Creator"), ("🤝 Connecting", "Influencer"), ("🔍 Analyzing", "Analyst"), ("✅ Doing", "Catalyst")]}
-]
-PROFILE_DESCRIPTIONS = {
-    "Creator": "Innovative, big-picture, loves launching ideas. Best fit: Product Designer, Brand Builder, Strategy.",
-    "Influencer": "Natural leader, communicator, energizes teams. Best fit: PR, HR, Client Relations, Media.",
-    "Catalyst": "Efficient, action-oriented, gets results. Best fit: Ops Manager, Logistics, Project Execution.",
-    "Analyst": "Precise, data-driven, solves puzzles. Best fit: Finance, Data, Engineering."
-}
-# --- SESSION STATE ---
-if "messages" not in st.session_state: st.session_state.messages = []
-if "step" not in st.session_state: st.session_state.step = 0
-if "q_index" not in st.session_state: st.session_state.q_index = 0
-if "scores" not in st.session_state: st.session_state.scores = {"Creator": 0, "Influencer": 0, "Analyst": 0, "Catalyst": 0}
-if "profile_result" not in st.session_state: st.session_state.profile_result = None
-
-# --- SIDEBAR: BIO, PRIVACY & COPYRIGHT + REDIRECT ---
+# --- SIDEBAR: BIO, BRAND, CONTACT ---
 with st.sidebar:
-    st.markdown("<h3 style='color:#0077B6;'>EMPOWERING INDIA 🇮🇳</h3>", unsafe_allow_html=True)
+    st.markdown("<h4 style='color:#0077B6;'>DISTOVERSITY</h4>", unsafe_allow_html=True)
     st.title("Mohd Saad")
-    st.markdown("Founder | Ed-Tech Intrapreneur")
+    st.markdown("**Founder | EdTech Entrepreneur**")
     st.caption("📍 New Delhi, India")
-    st.success("🎯 Mission: To replace 'Sales' in education with 'Science'.")
-    st.markdown("### 🛠 Skills")
-    st.code("Python & Streamlit")
-    st.code("LLM & AI Agents")
-    st.code("Franchise Expansion")
-    st.code("Ed-Psychology")
+    st.success("🎯 Mission: Replace 'sales' in education with 'science' and empowerment.")
     st.markdown("---")
-    st.markdown("<b>Privacy Policy:</b> Your data is always safe and confidential. We never sell or share personal information.", unsafe_allow_html=True)
-    st.markdown("<b>Copyright © 2025 Distoversity.</b> All rights reserved.", unsafe_allow_html=True)
-    st.markdown("[LinkedIn](https://linkedin.com) | [Email](mailto:saad01489@gmail.com)")
-    st.markdown("---")
-    st.markdown("## Go to Career Guidance Platform (Distoversity)")
-    st.markdown(
-        "[👉 Try Distoversity AI Career Platform](https://distoversity-mvp-j4pmyhqdjr7v7ukpgwmyx6.streamlit.app/)",
-        unsafe_allow_html=True
+    st.markdown("### 🏆 Brand Expertise")
+    st.code(
+        "Franchise Expansion & Early Growth\n"
+        "Career Counseling & Student Guidance\n"
+        "EdTech (Python, Power BI, Streamlit)\n"
+        "Student Support (UG/PG/Scholarships)\n"
+        "Early Childhood (HighScope, Holistic ECE)\n"
+        "Program Leadership & Team Building"
     )
+    st.markdown("---")
+    st.markdown("<b>Privacy Policy:</b> Your data is always safe and confidential.", unsafe_allow_html=True)
+    st.markdown("Copyright © 2025 Distoversity. All rights reserved.", unsafe_allow_html=True)
+    st.markdown("[LinkedIn](https://linkedin.com) | [Email](mailto:saad01489@gmail.com)")
 
-# --- MAIN TABS ---
-tab1, tab2, tab3, tab4 = st.tabs([
-    "📖 My Story (The Hook)", 
-    "🛤️ Why Teach For India?", 
-    "🧠 The 4-Genius Framework", 
-    "🤖 Eduveer AI (Live Demo)"
-])
+# ----- MAIN BRAND INTRO (Landing Hook) -----
+st.header("From Classroom to Changemaker: Distoversity’s 10-Year Journey 🚀")
+st.markdown("##### *How on-ground wisdom, tech, and passion built a brand for India's future*")
+st.markdown("<h3 style='color:#0077B6;'>BUILDING FUTURES, NOT JUST CAREERS</h3>", unsafe_allow_html=True)
+st.divider()
 
-# --- TAB 1: STORY ---
-with tab1:
-    st.header("From Assembly Lines to Assembling Futures 🚀")
-    st.markdown("##### *Why I quit a stable job to fix the Education System.*")
-    st.markdown("<h3 style='color:#0077B6;'>EMPOWERING INDIA 🇮🇳</h3>", unsafe_allow_html=True)
-    st.divider()
-    col1, col2 = st.columns([2,1])
-    with col1:
-        st.markdown("""
-        <div style="margin-bottom:22px;">
-            <div style="font-size:1.2em;color:#0077B6;font-weight:800;margin-bottom:4px;">📅 <span style="background:#E0F2FE;border-radius:8px;padding:2px 12px 2px 8px;">2018 – 2020</span></div>
-            <div style="font-size:1.07em;font-weight:700;">🏭 The Factory Floor Reality</div>
-            <div style="color:#475569;">
-            My journey began at <b>Oppo Mobile & Yazaki</b>, 12-hour shifts as Line Engineer, assembling SMT boards.<br>
-            <span style="font-weight:600;color:#F97316;">Lesson:</span> India has millions of youth with grit but lacking guidance. I felt trapped, assembling products instead of building lives.
-            </div>
-        </div>
-        <div style="margin-bottom:22px;">
-            <div style="font-size:1.2em;color:#F97316;font-weight:800;margin-bottom:4px;">📅 <span style="background:#FEF3C7;border-radius:8px;padding:2px 10px 2px 8px;">2021 – 2024</span></div>
-            <div style="font-size:1.07em;font-weight:700;">📞 The "Sales" Trap</div>
-            <div style="color:#475569;">
-            I moved to Education Counseling (Amity/Manipal), helped 2,000+ students. Realized education was transactional, not transformational. Students became "Leads"; counselors closed deals, not dreams.
-            </div>
-        </div>
-        <div style="margin-bottom:22px;">
-            <div style="font-size:1.2em;color:#10B981;font-weight:800;margin-bottom:4px;">📅 <span style="background:#D1FAE5;border-radius:8px;padding:2px 11px 2px 8px;">2024 – Present</span></div>
-            <div style="font-size:1.07em;font-weight:700;">🚀 Distoversity & Eduveer</div>
-            <div style="color:#475569;">
-            I chose to build. Distoversity merges <b>Psychology (4-Genius)</b> and <b>Tech (AI)</b>. I don't sell degrees; I architect futures.
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-    with col2:
-        st.info("💡 Why Teach For India?")
-        st.markdown("""
-        - Grit of a factory worker  
-        - Empathy of a counselor  
-        - Vision of a founder  
-        I want to bring <b>Operations + Tech + Heart</b> to Teach For India.
-        """, unsafe_allow_html=True)
-        st.success("🎓 Impact: 2,000+ students served | 35% improved career satisfaction.")
-        st.markdown("""
-        <div class="card" style="margin-top:14px;">
-            <h4>Success Story: Riya</h4>
-            <p>Riya struggled to match her skills to a degree. After our counseling, she’s thriving in a program that fits her natural energy and ambition.</p>
-        </div>
-        """, unsafe_allow_html=True)
+st.markdown("""
+I’m **Mohd Saad**, and this is how Distoversity was born.
+<br><br>
+**2015–2019: Classroom Foundations**  
+I started as a teacher, living inside India’s classrooms—discovering that impact is about mentorship, not just marks. Every child has a dream; most just lack a champion.
+<br><br>
+**2020–2021: Corporate Insight**  
+I entered the powerhouse world of OPPO and Yazaki. Here, I learned scale, systems, and operational grit—but the calling to uplift Indian education never left me.
+<br><br>
+**2021–2025: Counseling, Leadership & Scaling Change**  
+From Amity to Manipal, UNIVO, NMIMS, NIU—over 2,000 students and families guided. I turned counseling into career architecture, focusing on real futures, not just admissions.  
+At **Footprints Day Care**, I led expansion into new cities and championed holistic, global early childhood models (HighScope USA), proving that business and care can—and should—grow together.
+<br><br>
+**Tech as a Bridge: EdTech Innovator**  
+My love for problem-solving led me from counseling rooms to code—building dashboards (Power BI), rapid solutions (Python/Streamlit), and launching data-driven guidance, so every decision in education is smarter and fairer.
+<br><br>
+---
 
-# --- TAB 2: TFI Alignment ---
-with tab2:
-    st.header("Why Teach For India?")
-    st.markdown("""
-    - Every child in India deserves world-class guidance—not just academic salesmanship.
-    - My journey as an engineer-counselor-founder taught me that real impact is measured in lives changed, not just deals closed.
-    - With AI and psychology, we help students discover unique strengths and the right education.
-    - At Distoversity, we put students first and build scalable mentorship, hope, and credibility.
-    """)
-    st.success("🌱 Let's work together for transformative education.")
-    st.info("🤝 Ready to collaborate: [Connect on LinkedIn](https://www.linkedin.com)")
+### Why Distoversity?
+Distoversity isn’t just a company, it’s the answer to a decade of ground lessons. I saw India’s education gaps up close, and the solution isn’t just more tech or more sales—it’s **personalization, ethics, analytics, and heart**.
+<br><br>
+**Distoversity is my promise:** To democratize access, empower every student, and build a new brand of education leadership for India.
+""", unsafe_allow_html=True)
 
-# --- TAB 3: FRAMEWORK ---
-with tab3:
-    st.header("We don't ask for Marks. We ask for Energy.")
-    st.write("Distoversity philosophy: You cannot judge a fish by its ability to climb a tree.")
-    st.markdown("<h3 style='color:#0077B6;'>EMPOWERING INDIA 🇮🇳</h3>", unsafe_allow_html=True)
-    c1, c2 = st.columns(2)
-    with c1:
-        energy = st.selectbox(
-            "Select a Profile to Analyze:", 
-            ["Creator", "Influencer", "Catalyst", "Analyst"]
-        )
-    with c2:
-        if energy:
-            st.markdown(f"**{energy}:** {PROFILE_DESCRIPTIONS[energy]}")
-            if "Creator" == energy: st.success("🌟 Vision-driven. Loves freedom. Struggles with routine.")
-            if "Influencer" == energy: st.warning("🔥 People-driven. Needs collaboration. Avoids isolation.")
-            if "Catalyst" == energy: st.info("🤝 Results-driven. Needs structure, hates chaos.")
-            if "Analyst" == energy: st.error("📊 Data-driven. Needs clarity, hates hype.")
+st.success("🌱 Empowering India's next generation—one learner, family, and school at a time.")
 
-# --- TAB 4: EDUVEER BOT/QUIZ ---
-with tab4:
-    st.title("🤖 Eduveer AI Demo")
-    st.markdown("<h3 style='color:#0077B6;'>EMPOWERING INDIA 🇮🇳</h3>", unsafe_allow_html=True)
-    st.caption("Logic-based career counselor for every Indian student.")
+# Key Expertise Cards (showcase as brand)
+st.markdown("#### My Sectoral Impact & Brand Differentiators")
+cols = st.columns(3)
+with cols[0]:
+    st.info("**2,000+ students/families guided**\n\nAcross India’s top universities and programs.")
+with cols[1]:
+    st.success("**Franchise Growth:**\n\nScaled Footprints Day Care into new cities with holistic ECE (HighScope) models.")
+with cols[2]:
+    st.warning("**Built EdTech Tools:**\n\nPower BI dashboards, Python/Streamlit solutions for smarter education.")
 
-    if st.session_state.step == 0:
-        if st.button("Start AI Assessment ➔", type="primary"):
-            st.session_state.step = 1
-            st.rerun()
-    elif st.session_state.step == 1:
-        curr = QUESTIONS[st.session_state.q_index]
-        st.markdown(f"**Q{st.session_state.q_index + 1}:** {curr['q']}")
-        cols = st.columns(2)
-        for i, (txt, en) in enumerate(curr["options"]):
-            if cols[i%2].button(txt, key=f"btn_{i}_{st.session_state.q_index}"):
-                st.session_state.scores[en] += 1
-                if st.session_state.q_index < len(QUESTIONS)-1:
-                    st.session_state.q_index += 1
-                else:
-                    st.session_state.step = 2
-                st.rerun()
-    elif st.session_state.step == 2:
-        primary = max(st.session_state.scores, key=st.session_state.scores.get)
-        st.success(f"🎉 Result: You are a {primary}!")
-        st.write(PROFILE_DESCRIPTIONS[primary])
-        st.write("Universities matching your profile:")
-        matches = [u for u in UNIVERSITIES if primary in u["best_for"]]
-        for u in matches:
-            st.markdown(f"""
-            <div style="padding:15px; border:1px solid #ddd; border-radius:10px; margin-bottom:10px;">
-                <h4>{u['name']}</h4>
-                <p><b>Programs:</b> {', '.join(u['programs'])} | <b>Fee:</b> {u['fee']} | <b>Highest Pkg:</b> {u['high_pkg']}</p>
-            </div>
-            """, unsafe_allow_html=True)
-        if st.button("Restart Demo"):
-            st.session_state.step = 0
-            st.session_state.q_index = 0
-            st.session_state.scores = {"Creator": 0, "Influencer": 0, "Analyst": 0, "Catalyst": 0}
-            st.rerun()
+#---------- OPTIONAL: Extra Inspiration / Testimonials section ----------
+st.markdown("""
+---
+##### A Brand for the Future
+> "*Distoversity is built on the belief that every learner in India deserves world-class, personal guidance — not just ‘admissions support’, but lifelong empowerment.*"
+""")
 
-# --- FOOTER: PRIVACY & COPYRIGHT ---
+# Footer Brand Note
 st.markdown("""
 <div class="footer-note">
-<b>EMPOWERING INDIA 🇮🇳</b><br>
+<b>DISTOVERSITY – EMPOWERING INDIA</b><br>
 <b>Privacy Policy:</b> We do NOT collect, share, or sell your personal data. All information is confidential.<br>
 <b>Copyright © 2025 Distoversity. All rights reserved.</b>
 </div>
