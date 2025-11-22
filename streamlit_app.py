@@ -8,33 +8,60 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# --- PROFESSIONAL, CLEAN CSS ---
+# --- FORCE LIGHT THEME ON ALL DEVICES: STRONG OVERRIDE ---
 st.markdown("""
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
-body, html, [data-testid="stAppViewContainer"], .stApp {
+html, body, [data-testid="stAppViewContainer"], .stApp, .main {
+    background-color: #F4F9FD !important;
+    color: #0F172A !important;
     font-family: "Inter", "Montserrat", Arial, sans-serif !important;
 }
+/* Override any forced dark mode or OS settings */
+@media (prefers-color-scheme: dark) {
+    html, body, [data-testid="stAppViewContainer"], .stApp, .main {
+        background-color: #F4F9FD !important;
+        color: #0F172A !important;
+    }
+    section[data-testid="stSidebar"] > div {
+        background-color: #FFF !important;
+        color: #0F172A !important;
+    }
+}
+/* Sidebar, headings, form, and inputs */
 section[data-testid="stSidebar"] > div {
     background-color: #FFFFFF !important;
+    color: #0F172A !important;
     border-right: 1px solid #E2E8F0;
     width: 320px !important;
     min-width: 320px !important;
     max-width: 99vw !important;
     box-sizing: border-box;
 }
+h1, h2, h3, h4, h5 {
+    font-family: "Montserrat", Arial, sans-serif !important;
+    color: #19376D !important;
+    font-weight: 700;
+}
+.stMarkdown, div, p, label { font-family: "Inter", Arial, sans-serif !important; }
+input, textarea, select, div[data-baseweb="select"] {
+    background-color: #FFFFFF !important;
+    color: #000 !important;
+    border: 1px solid #CBD5E1 !important;
+}
+.stButton>button {
+    color: #fff !important;
+    background: #0077B6 !important;
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+}
+/* For all devices */
 @media screen and (max-width: 600px) {
     section[data-testid="stSidebar"] > div {
         min-width: 97vw !important;
         width: 97vw !important;
     }
 }
-h1, h2, h3, h4 {
-    font-family: "Montserrat", Arial, sans-serif !important;
-    color: #19376D !important;
-    font-weight: 700;
-}
-.stMarkdown, div, p, label { font-family: "Inter", Arial, sans-serif !important; }
 .footer-note {
     font-size:0.95em; color:#758fa0 !important; text-align:center; margin-top:30px;
     font-family:"Montserrat",Arial,sans-serif !important;
