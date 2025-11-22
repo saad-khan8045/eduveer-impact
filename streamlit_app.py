@@ -5,81 +5,11 @@ import pandas as pd
 st.set_page_config(
     page_title="Distoversity | Free Career Assessment & University Counseling - Find Your Dream Career",
     page_icon="🎓",
-    layout="wide",
-    initial_sidebar_state="expanded"
+    layout="wide"
 )
 st.markdown("""
     <meta name="description" content="Discover your ideal career with Distoversity's free 4D Assessment. Get personalized university recommendations and expert counseling. 100% data privacy - we never sell your information!">
 """, unsafe_allow_html=True)
-
-# --- SIDEBAR: Professional and Brand-Matched ---
-with st.sidebar:
-    st.markdown("""
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-    .sb-title{font-family:Montserrat,sans-serif;font-size:2em;font-weight:900;color:#003366;}
-    .sb-sub{font-family:Montserrat,sans-serif;font-size:1.09em;color:#1264a1;font-weight:700;margin-top:0;margin-bottom:10px;}
-    .sb-skillheading{font-family:Montserrat,sans-serif;font-size:1.11em;margin-bottom:3px;margin-top:7px;}
-    .sb-bul{font-family:Inter,sans-serif;font-size:1em;font-weight:500;line-height:1.27em;}
-    .sb-domain{font-family:Montserrat,sans-serif;font-size:1.08em;margin-bottom:2px;margin-top:12px;}
-    .sb-cta{background:linear-gradient(111deg,#e0f2fe,#c5fdd6);border-radius:12px;padding:17px 13px 11px 14px;
-        border:1.5px solid #bae6fd;margin:15px 0 20px 0;box-shadow:0 3px 18px #c6f9f866;font-family:Inter,sans-serif;}
-    .sb-cta button{margin-top:7px;background:#059669!important;color:#fff;border:none;border-radius:5px;
-    padding:10px 24px;font-size:1em;font-weight:700;box-shadow:0 2px 8px #20715023;cursor:pointer;}
-    .alison-tag {background:#e7f7e7;color:#308045;border-radius:7px;font-size:0.94em;font-weight:600;
-        display:inline-block;padding:3px 9px 2px 9px;margin-top:7px;}
-    </style>
-    """, unsafe_allow_html=True)
-    st.markdown('<span class="sb-title">DISTOVERSITY</span> <span style="font-size:1.12em;">| EMPOWERING INDIA</span>', unsafe_allow_html=True)
-    st.title("Mohd Saad")
-    st.markdown('<div class="sb-sub">Your Career Success Partner</div>', unsafe_allow_html=True)
-    st.markdown("Founder | EdTech Entrepreneur<br>Early Childhood & EdTech Leader", unsafe_allow_html=True)
-    st.caption("📍 New Delhi, India")
-    st.markdown("<div style='background:#dbf4e5;padding:9px 10px 7px 11px;border-radius:9px;font-size:1em;margin-top:7px;margin-bottom:8px;'>🎯 <b>Mission:</b> Replace 'Sales' in education with 'Science', Ethics, and Empowerment.</div>", unsafe_allow_html=True)
-    st.markdown("""
-    <div class="sb-skillheading"><b>🚀 Key Skills & Domain Expertise</b></div>
-    <div>
-    <div class="sb-skillheading">Teaching & Educational Mentorship</div>
-    <div class="sb-bul">
-      • 10+ years ground teaching & empowerment<br>
-      • Pedagogy, curriculum development, mentorship
-    </div>
-    </div>
-    <div>
-    <div class="sb-domain"><b>Domain Expertise</b></div>
-    <div class="sb-bul">
-      • Leadership for Footprints franchise growth (all India)<br>
-      • 2,000+ students personally counseled/advised<br>
-      • Admissions, student guidance (Subharti, Himalayan Garhwal, Noida International, Amity, Manipal, DY Patil, NMIMS)<br>
-      • Power BI, Python, Streamlit analytics<br>
-      • Deep child psychology understanding (Footprints Early Ed)<br>
-      • Team Leadership | Ed-Psychology | Business Strategy
-    </div>
-    </div>
-    <div style='font-family:Inter,sans-serif;font-size:1em;margin-top:7px;margin-bottom:4px;'>
-    <span style='font-weight:600;'>Our counselling is <span style='color:#008066;'>data-driven</span>, powered by assessment.<br><span style='color:#0077B6;'>Cost: ₹999/session.</span></span>
-    </div>
-    <div class="sb-cta">
-        <span style="font-size:1.04em;font-weight:700;color:#085f43;">🌟 Ready to discover your energy and direction?</span><br>
-        Let's move beyond confusion and guesswork.<br>
-        <b>Book a 4D Assessment—let’s plan your next step together.</b><br>
-        <span style='color:#1f5d58;font-size:0.99em;'>No more random calls. Real futures, real results.<br>
-        Sign up for your session now for just <b>₹999!</b></span><br>
-        <a href='mailto:saad01489@gmail.com?subject=Book%20my%204D%20Assessment%20Session' target="_blank">
-        <button>Book My Session</button></a>
-        <span class="alison-tag">Proud Alison Community Member</span>
-    </div>
-    """, unsafe_allow_html=True)
-    st.markdown("<div style='font-family:Inter,sans-serif;font-size:1em;color:#126064;margin-bottom:4px;'>🔒 <b>We are NOT selling your data</b>. Your privacy is 100% protected.</div>", unsafe_allow_html=True)
-    st.markdown("<div style='font-family:Inter,sans-serif;color:#516984;font-size:0.97em;'>Copyright © 2025 Distoversity. All rights reserved.</div>", unsafe_allow_html=True)
-    st.markdown("<div style='font-family:Inter,sans-serif;font-size:0.96em;'><a href='https://linkedin.com' target='_blank'>LinkedIn</a> | <a href='mailto:saad01489@gmail.com'>Email</a></div>", unsafe_allow_html=True)
-    st.markdown("---")
-    st.markdown("<div style='font-family:Montserrat,sans-serif;font-weight:700;font-size:1.01em;'>Try Our Career Guidance Platform</div>", unsafe_allow_html=True)
-    st.markdown("<a class='alison-tag' href='https://distoversity-mvp-j4pmyhqdjr7v7ukpgwmyx6.streamlit.app/' target='_blank'>👉 Distoversity Career Platform</a>", unsafe_allow_html=True)
-
-# ===========================
-# ======= MAIN WEBSITE ======
-# ===========================
 
 # --- MODERN DESIGN / COLOR / FONT ---
 st.markdown("""
@@ -205,16 +135,21 @@ def navbar():
     if cols[5].button("About"): st.session_state.page="About";st.rerun()
     st.markdown("---")
 
-# --- PAGE ROUTES (100% site logic preserved, no changes) ---
+# --- PAGE ROUTES ---
 def home_page():
-    st.markdown("""<div style="background: linear-gradient(90deg, #E0F2FE 20%, #d1fae5 90%);
+    # Empowering India Vision Banner
+    st.markdown("""
+    <div style="background: linear-gradient(90deg, #E0F2FE 20%, #d1fae5 90%);
                 border-radius:18px; border:2px solid #00AEEF;
-                padding:24px 22px 18px 22px; margin-bottom:22px; box-shadow:0 2px 14px #1ab6ed21;">
+                padding:24px 22px 18px 22px; margin-bottom:22px; box-shadow: 0 2px 14px #1ab6ed21;">
         <h2 style="text-align:center; color:#003366; margin-bottom:7px;">🚀 Our Vision: Empowering India</h2>
         <p style="font-size:1.17rem; color:#045; text-align:center;">
         <b>Distoversity</b> is on a mission to help every student—and every working professional—discover their purpose, build global skills, and achieve career dreams with ethics and transparency.<br>
         <span style="color:#1bbc87; font-weight:700;">Together, we are empowering India—one future at a time.</span>
-        </p></div>""", unsafe_allow_html=True)
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+    # ...rest of your home hero content unchanged...
     st.markdown("""
     <div class="hero-section">
         <h1>Unlock Your Dream Career – Start Your Free Assessment Today! <span class='nav-flag'>🎯</span></h1>
@@ -260,6 +195,7 @@ def assessment_page():
             st.session_state.scores = tally
             nav("Result")
 
+# --- ENHANCED RESULT PAGE for Color & Engagement ---
 def result_page():
     prof = st.session_state.get("profile")
     scores = st.session_state.get("scores")
@@ -267,6 +203,8 @@ def result_page():
         st.warning("⚠️ Please complete your free assessment first to see your personalized results!"); return
     st.markdown(f"<h2 style='color:#1376d4;text-align:center;'>🎉 Congratulations! You're a <span style='text-transform:uppercase;'>{prof}</span></h2>",unsafe_allow_html=True)
     st.markdown(f"""<div class="badge" style="margin-bottom:10px;">Expert Verified | Your Personalized Career DNA</div>""",unsafe_allow_html=True)
+
+    # Engaging color panels for Students & Professionals
     st.markdown("""
     <div style="background: linear-gradient(90deg, #eaf6ff 0%, #defcf9 100%);
                 border-radius:16px; border:2px solid #b2ddff; padding:22px; margin:16px 0;">
@@ -278,6 +216,7 @@ def result_page():
         </ul>
     </div>
     """, unsafe_allow_html=True)
+
     st.markdown("""
     <div style="background: linear-gradient(90deg, #f0fff4 0%, #e6fbf4 100%);
                 border-radius:16px; border:2px solid #b6f0d4; padding:22px; margin:16px 0;">
@@ -289,6 +228,7 @@ def result_page():
         </ul>
     </div>
     """, unsafe_allow_html=True)
+
     st.markdown("""
     <div class='d-card' style='margin-bottom:1.2rem;'>
         <b>📊 Understanding Each Career Type (Your Strengths & Growth Tips):</b>
@@ -347,7 +287,7 @@ def faq_page():
         ("How do you select which universities to recommend?",
          "We only feature UGC, NAAC, and AICTE approved universities. All data (fees, placements, ratings) is verified and transparent. You get honest information to make informed decisions."),
         ("How can I contact you for counseling?",
-         "Easy! Click the floating button on your screen, or email us at [distoversity@gmail.com](mailto:distoversity@gmail.com), or WhatsApp: +91-9111111111. We're here to help!")
+         "Easy! Click the floating button on your screen, or email us at distoversity@gmail.com, or WhatsApp: +91-9111111111. We're here to help!")
     ]
     for q,a in faq:
         with st.expander(q):
@@ -377,7 +317,7 @@ def about_page():
 
 def nav(p): st.session_state.page=p; st.rerun()
 
-# --- MAIN ROUTER (all tabs/pages, nothing hidden) ---
+# --- MAIN ROUTER ---
 navbar()
 page_map={"Home":home_page,"Assessment":assessment_page,"Result":result_page,
           "Universities":universities_page,"FAQ":faq_page,"About":about_page}
