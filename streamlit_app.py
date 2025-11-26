@@ -181,10 +181,10 @@ with tab1:
         </div>
 
         <div style="margin-bottom:28px;">
-            <div style="font-size:1.14em;color:#0077B6;font-weight:800;margin-bottom:4px;">2020–2024</div>
+            <div style="font-size:1.14em;color:#0077B6;font-weight:800;margin-bottom:4px;">2020–2025</div>
             <div style="font-weight:700;">Across India’s Top Universities: Learning From 2,000+ Lives</div>
             <div style="color:#475569;">
-            For four years, I was not just a counselor, but a listener and a guide for young people at  
+            For five years, I was not just a counselor, but a listener and a guide for young people at  
             <b>Subharti, Himalayan Garhwal, Noida International University, Amity, Manipal, DY Patil, NMIMS</b> and more.  
             Every face, every story was different—families coming with hope, confusion, fears about the future.  
             I didn’t just match students to programs; I helped parents rediscover pride, I helped students make real-life choices.  
