@@ -194,7 +194,7 @@ with tab1:
         </div>
 
         <div style="margin-bottom:28px;">
-            <div style="font-size:1.14em;color:#10B981;font-weight:800;margin-bottom:4px;">2024–Present</div>
+            <div style="font-size:1.14em;color:#10B981;font-weight:800;margin-bottom:4px;">2024–2025</div>
             <div style="font-weight:700;">Footprints Day Care: Franchise, Childhood, Psychology</div>
             <div style="color:#475569;">
             I led franchise growth for Footprints Day Care—traveling across India, I saw how little ones learn, how mothers and fathers dream for their children,  
@@ -205,7 +205,7 @@ with tab1:
         </div>
 
         <div style="margin-bottom:28px;">
-            <div style="font-size:1.13em;color:#F97316;font-weight:800;margin-bottom:4px;">2024–Present</div>
+            <div style="font-size:1.13em;color:#F97316;font-weight:800;margin-bottom:4px;">Present</div>
             <div style="font-weight:700;">Distoversity and The Four-Dimensional 4D Assessment </div>
             <div style="color:#475569;">
             Out of ten years of listening, teaching, counseling, and growing, I built <b>Distoversity</b>—not as a business,  
