@@ -134,7 +134,7 @@ with st.sidebar:
         <div class="motivate-cta">
         🌟 <b>Ready to discover your energy and direction?</b><br>
         Let's move beyond confusion and guesswork.
-        <b>Book a 4D 4D Assessment —let’s plan your next step, together.</b><br>
+        <b>Book a 4D Assessment —let’s plan your next step, together.</b><br>
         <span style="color:#1a7272;">No more random calls. Real futures, real results.<br>
         <b>Sign up for your session now for just ₹999!</b></span>
         <br>
